@@ -10,7 +10,7 @@ Demo có đúng ba chức năng:
 2. **Khôi phục nội dung cũ:** upload bản sửa cùng tên, xem Versioning rồi đưa nội dung cũ thành bản hiện tại.
 3. **Chia sẻ có thời hạn:** tạo presigned URL để người không đăng nhập AWS đọc được một tài liệu.
 
-**Trạng thái:** đây là hướng dẫn và kịch bản chuẩn bị. Chưa có bằng chứng demo đã được chạy trên tài khoản AWS; chỉ đánh dấu hoàn thành khi kiểm tra thực tế và lưu kết quả vào báo cáo kiểm thử.
+**Trạng thái:** đã thực hiện demo trên AWS ngày 28/10/2026. Xem [kết quả thực tế](ket-qua-demo.md) và ảnh để biết từng phép thử đã xác minh. Các ô tự kiểm ở dưới dành cho lần luyện tập tiếp theo của nhóm.
 
 ## 1. Chuẩn bị trước buổi học
 
@@ -31,14 +31,14 @@ Mở [Amazon S3 Console](https://console.aws.amazon.com/s3/), vào **General pur
 | --- | --- | --- |
 | Region | Asia Pacific (Sydney), `ap-southeast-2`, như bucket demo đã tạo | Chọn một vùng và giữ nguyên trong bài |
 | Bucket type | General purpose | Phù hợp kho tài liệu thông thường |
-| Bucket name | Ví dụ `s3-kho-tai-lieu-nhom-20261028-<chuoi-ngau-nhien>`; thay phần trong ngoặc | Nếu dùng shared global namespace, tên phải chưa được tài khoản khác dùng trong cùng partition |
+| Bucket name | `cloudnotes-starlight`, tên đã chọn cho bài demo | Nếu dùng shared global namespace, tên phải chưa được tài khoản khác dùng trong cùng partition |
 | Object Ownership | ACLs disabled / Bucket owner enforced | Quản lý quyền qua policy |
 | Block Public Access | **Block all public access: bật**, giữ cả bốn mục bật | Không công khai bucket |
 | Bucket Versioning | Enable | Giữ các lần ghi cùng key |
 | Default encryption | SSE-S3, Amazon S3 managed keys | Mã hóa dữ liệu khi lưu |
 | Object Lock và các tính năng bổ sung | Không bật trong bài này | Giữ phạm vi dễ hiểu |
 
-Tên ví dụ chỉ dùng chữ thường, số và dấu gạch nối. Nếu console cho chọn namespace, dùng **shared global namespace** để đi theo bài; không dựa vào tên bucket để bảo mật. Sau khi tạo, ghi lại Region và bucket name trong ghi chú cá nhân. [AWS: bucket và namespace](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)
+Tên `cloudnotes-starlight` ngắn và có ý nghĩa với kho tài liệu. Nếu tên đã được dùng khi bạn tái hiện bài, chọn một tên riêng có ý nghĩa và phân biệt được cho nhóm mình; không bắt buộc thêm ngày hoặc chuỗi số ngẫu nhiên. Dùng chữ thường và dấu gạch nối theo quy tắc tên bucket. Nếu console cho chọn namespace, dùng **shared global namespace** để đi theo bài; không dựa vào tên bucket để bảo mật. Sau khi tạo, ghi lại Region và bucket name trong ghi chú cá nhân. [AWS: bucket và namespace](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)
 
 **Kết quả cần thấy:** bucket xuất hiện trong danh sách. Trong **Permissions**, kiểm tra Block Public Access vẫn bật và Object Ownership là Bucket owner enforced. Đây là cấu hình mặc định được AWS khuyến nghị cho bucket mới. [AWS: Object Ownership và Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-ownership-new-bucket.html)
 

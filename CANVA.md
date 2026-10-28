@@ -4,7 +4,7 @@ Dùng [canva-noi-dung.txt](canva-noi-dung.txt) để đưa đúng phần chữ n
 
 Thời lượng mục tiêu là **35 phút 30 giây**, đã gồm **7 phút 30 giây demo trực tiếp**. Các trang 27–29 dẫn vào thao tác trên AWS Console; trình chiếu không thay thế phần demo thật.
 
-Repository dự kiến để gắn vào slide 30 sau khi xác nhận push thành công: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo). Có thể tạo QR cho địa chỉ repository này sau khi kiểm tra truy cập được; không tạo QR cho presigned URL.
+Repository đã có nội dung được push: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo). Repository hiện **private**; người xem cần được cấp quyền để mở tài liệu. Có thể tạo QR cho địa chỉ repository trên slide 30, kèm lưu ý quyền truy cập; không tạo QR cho presigned URL.
 
 ## 1. Nội dung nhập cho Canva
 
@@ -52,6 +52,16 @@ Tải các ảnh JPG dưới đây từ `assets/demo/` khi chúng thực sự đ
 Slide 29 có thể dùng ba ảnh 05–07 theo hàng ngang, mỗi ảnh một trạng thái và một nhãn ngắn. Cắt gọn để chữ lỗi hoặc nội dung tài liệu đọc được; không cần chụp toàn bộ trình duyệt. Slide 08 có thể tái sử dụng ảnh 01 nếu phù hợp, nhưng sơ đồ bucket trong dàn ý đã đủ giải thích khái niệm.
 
 Danh mục gốc: [assets/demo/README.md](assets/demo/README.md). Các đường dẫn trong repo không tự đưa ảnh vào thiết kế; nhóm cần chọn đúng tệp ảnh để tải lên.
+
+### Sơ đồ minh họa có sẵn, dùng tùy chọn
+
+Ba file SVG dưới đây là **sơ đồ khái niệm do nhóm thiết kế**, không phải ảnh chụp AWS và không phải bằng chứng demo đã chạy. Có thể dùng trực tiếp như hình minh họa hoặc dựng lại bằng các khối trong Canva; chúng không thay thế bảy ảnh kết quả thật ở trên.
+
+| Sơ đồ | Slide gợi ý | Ý cần giải thích |
+| --- | --- | --- |
+| [assets/so-do-kien-truc.svg](assets/so-do-kien-truc.svg) | 26 | Người trình bày dùng Console quản lý S3; GitHub giữ tài liệu |
+| [assets/so-do-versioning.svg](assets/so-do-versioning.svg) | 19, 28 | Nội dung v1 được tải rồi upload cùng key thành v3 |
+| [assets/so-do-link-tam-thoi.svg](assets/so-do-link-tam-thoi.svg) | 29 | URL thường bị chặn; URL đã ký còn hạn đọc được; yêu cầu mới sau hạn bị từ chối |
 
 ## 3. Giữ lời nói, nguồn và demo thống nhất
 

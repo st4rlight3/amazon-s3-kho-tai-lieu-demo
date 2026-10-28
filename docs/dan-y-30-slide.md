@@ -581,16 +581,16 @@ Bây giờ em tải tệp trong samples/v2 vào đúng gốc và cùng key. Nhó
 - Versioning giữ lịch sử; presigned URL chia sẻ có hạn
 - Dùng đúng quyền, lớp lưu trữ và cách tính phí
 - Câu hỏi: Vì sao URL thường bị chặn mà link tạm mở được?
-- GitHub: [dán liên kết repository sau khi push]
+- GitHub: https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo
 
 **Lời thuyết trình:**
 
 Từ một tệp nhỏ, nhóm đã đi qua mô hình object, cấu hình bảo mật và cách kiểm chứng kết quả. Ba thao tác demo liên hệ trực tiếp với nhu cầu ban đầu: lưu tập trung, lấy lại nội dung cũ và chia sẻ trong một khoảng thời gian. Nếu thầy hỏi vì sao link thường bị chặn mà link tạm mở được, câu trả lời là presigned URL mang chữ ký và quyền có thời hạn của người tạo; bucket không cần trở thành công khai. Repository chứa tài liệu để người khác tái hiện. Sau buổi học, nhóm kiểm tra chi phí và dọn tài nguyên, gồm cả các phiên bản đã lưu.
 
-**Gợi ý hình:** Ba biểu tượng “Object”, “Version”, “Quyền có hạn”; thêm QR repository sau khi có URL thật. Có thể đặt link tới tài liệu nguồn trong repository bằng chữ nhỏ.
+**Gợi ý hình:** Ba biểu tượng “Object”, “Version”, “Quyền có hạn”; thêm QR repository. Repository hiện private nên người xem cần được cấp quyền; có thể đặt link tới tài liệu nguồn trong repository bằng chữ nhỏ.
 
 **Nguồn:** Tổng hợp các phần đã trình bày; xem [Danh mục nguồn AWS đã đối chiếu](nguon-tham-khao.md).
 
 ---
 
-**Kiểm tra trước khi đưa vào Canva:** đúng 30 trang; thay tên nhóm và link repository; ảnh demo phải lấy từ lần chạy thật; giữ các ghi chú thời gian ngoài phần hiển thị. Tổng thời lượng theo thứ tự slide: **0:30 + 1:00 + 0:30 + 1:00 + 0:45 + 1:00 + 1:15 + 1:00 + 1:00 + 1:15 + 1:15 + 1:00 + 1:00 + 1:30 + 1:00 + 1:15 + 1:15 + 0:45 + 1:15 + 1:15 + 1:00 + 1:15 + 1:00 + 1:15 + 1:00 + 0:45 + 2:00 + 3:00 + 2:30 + 1:00 = 35:30**. Nếu phần hỏi đáp kéo dài, dành thêm tối đa khoảng bốn phút để tổng buổi vẫn dưới 40 phút.
+**Kiểm tra trước khi đưa vào Canva:** đúng 30 trang; thay tên nhóm; kiểm tra link repository và quyền của người xem; ảnh demo phải lấy từ lần chạy thật; giữ các ghi chú thời gian ngoài phần hiển thị. Tổng thời lượng theo thứ tự slide: **0:30 + 1:00 + 0:30 + 1:00 + 0:45 + 1:00 + 1:15 + 1:00 + 1:00 + 1:15 + 1:15 + 1:00 + 1:00 + 1:30 + 1:00 + 1:15 + 1:15 + 0:45 + 1:15 + 1:15 + 1:00 + 1:15 + 1:00 + 1:15 + 1:00 + 0:45 + 2:00 + 3:00 + 2:30 + 1:00 = 35:30**. Nếu phần hỏi đáp kéo dài, dành thêm tối đa khoảng bốn phút để tổng buổi vẫn dưới 40 phút.

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Minh họa truy cập object riêng tư bằng presigned URL</title>
+  <desc id="desc">Bucket giữ riêng tư và Block Public Access bật. URL thường, không có chữ ký hoặc quyền đọc, bị từ chối. Presigned URL cho thao tác GET cho phép đọc trong thời hạn khi quyền và credentials còn hợp lệ. Một request mới sau khi URL hết hạn bị từ chối, dù tab đã tải trước đó có thể vẫn hiện nội dung. Đây là sơ đồ khái niệm, không phải bằng chứng chạy thật trên AWS.</desc>
+  <rect width="1600" height="900" fill="#F6F8FC"/>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#14243B">
+    <text x="80" y="96" font-size="46" font-weight="700" data-max-width="1440">Link tạm thời: Đọc được trong thời hạn</text>
+    <text x="80" y="148" font-size="27" fill="#51627B" data-max-width="1440">Presigned URL mang chữ ký cho một thao tác; bucket vẫn riêng tư</text>
+
+    <rect x="80" y="185" width="1440" height="76" rx="18" fill="#14243B"/>
+    <text x="112" y="233" font-size="30" font-weight="700" fill="#FFFFFF" data-max-width="640">Bucket S3 riêng tư</text>
+    <text x="1010" y="233" font-size="27" font-weight="600" fill="#FFBD59" data-max-width="470">Block Public Access: BẬT</text>
+
+    <rect x="80" y="315" width="420" height="365" rx="24" fill="#FFFFFF" stroke="#BED0E5" stroke-width="3"/>
+    <circle cx="124" cy="352" r="20" fill="#14243B"/>
+    <text x="118" y="360" font-size="23" font-weight="700" fill="#FFFFFF" data-max-width="20">1</text>
+    <text x="112" y="410" font-size="32" font-weight="700" data-max-width="350">URL thường</text>
+    <text x="112" y="452" font-size="25" fill="#51627B" data-max-width="350">Không có chữ ký</text>
+    <rect x="112" y="489" width="350" height="66" rx="16" fill="#E8EDF5"/>
+    <text x="142" y="532" font-size="30" font-weight="700" data-max-width="290">BỊ TỪ CHỐI</text>
+    <text x="112" y="606" font-size="25" data-max-width="350">Request không có quyền</text>
+    <text x="112" y="644" font-size="25" data-max-width="350">đọc object riêng tư.</text>
+
+    <rect x="590" y="315" width="420" height="365" rx="24" fill="#14243B"/>
+    <circle cx="634" cy="352" r="20" fill="#FF9900"/>
+    <text x="628" y="360" font-size="23" font-weight="700" data-max-width="20">2</text>
+    <text x="622" y="410" font-size="32" font-weight="700" fill="#FFFFFF" data-max-width="350">Presigned URL</text>
+    <text x="622" y="452" font-size="25" fill="#FFFFFF" data-max-width="350">Chữ ký cho thao tác GET</text>
+    <rect x="622" y="489" width="350" height="66" rx="16" fill="#FF9900"/>
+    <text x="657" y="532" font-size="30" font-weight="700" data-max-width="280">ĐỌC ĐƯỢC</text>
+    <text x="622" y="606" font-size="25" fill="#FFFFFF" data-max-width="350">URL và credentials còn hạn,</text>
+    <text x="622" y="644" font-size="25" fill="#FFFFFF" data-max-width="350">quyền đọc còn hợp lệ.</text>
+
+    <rect x="1100" y="315" width="420" height="365" rx="24" fill="#FFFFFF" stroke="#BED0E5" stroke-width="3"/>
+    <circle cx="1144" cy="352" r="20" fill="#14243B"/>
+    <text x="1138" y="360" font-size="23" font-weight="700" fill="#FFFFFF" data-max-width="20">3</text>
+    <text x="1132" y="410" font-size="32" font-weight="700" data-max-width="350">Sau khi hết hạn</text>
+    <text x="1132" y="452" font-size="25" fill="#51627B" data-max-width="350">Gửi một request mới</text>
+    <rect x="1132" y="489" width="350" height="66" rx="16" fill="#E8EDF5"/>
+    <text x="1162" y="532" font-size="30" font-weight="700" data-max-width="290">BỊ TỪ CHỐI</text>
+    <text x="1132" y="606" font-size="25" data-max-width="350">Tab đã tải trước đó</text>
+    <text x="1132" y="644" font-size="25" data-max-width="350">có thể vẫn còn nội dung.</text>
+
+    <rect x="80" y="720" width="1440" height="94" rx="22" fill="#FFF0D7"/>
+    <text x="112" y="760" font-size="26" font-weight="600" data-max-width="1375">Ai có link hợp lệ đều có thể đọc; URL không chỉ dùng một lần.</text>
+    <text x="112" y="798" font-size="24" fill="#51627B" data-max-width="1375">Không đưa URL có chữ ký còn hiệu lực vào slide hoặc GitHub.</text>
+
+    <text x="80" y="853" font-size="23" fill="#51627B" data-max-width="1440">Minh họa khái niệm. Đây không phải ảnh AWS Console hay bằng chứng chạy thật.</text>
+  </g>
+</svg>

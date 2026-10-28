@@ -215,4 +215,4 @@ Slide 30 — Ba điều cần nhớ và trao đổi với thầy
 - Versioning giữ lịch sử; presigned URL chia sẻ có hạn
 - Dùng đúng quyền, lớp lưu trữ và cách tính phí
 - Câu hỏi: Vì sao URL thường bị chặn mà link tạm mở được?
-- GitHub: [dán liên kết repository sau khi push]
+- GitHub: https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo

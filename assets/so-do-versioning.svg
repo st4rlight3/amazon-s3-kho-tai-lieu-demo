@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Minh họa S3 Versioning: phục hồi nội dung V1 thành phiên bản V3</title>
+  <desc id="desc">Ba phiên bản cùng key ke-hoach-nhom.txt. V1 có nội dung đúng, V2 sửa nhầm, V3 có nội dung của V1. Khôi phục bằng cách tải V1 từ S3 rồi tải lên lại cùng key. Lịch sử được giữ, mỗi phiên bản là toàn bộ object và tiếp tục được tính phí lưu trữ. Đây là sơ đồ khái niệm, không phải bằng chứng chạy thật trên AWS.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M1 1L11 6L1 11" fill="none" stroke="#FF9900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="#F6F8FC"/>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#14243B">
+    <text x="80" y="96" font-size="46" font-weight="700" data-max-width="1440">Versioning: Lấy lại nội dung, giữ lại lịch sử</text>
+    <text x="80" y="148" font-size="27" fill="#51627B" data-max-width="1440">Một key, ba phiên bản — bản cũ vẫn có thể đọc lại</text>
+
+    <rect x="80" y="185" width="1440" height="76" rx="18" fill="#14243B"/>
+    <text x="112" y="233" font-size="29" font-weight="600" fill="#FFFFFF" data-max-width="770">Cùng key: ke-hoach-nhom.txt</text>
+    <text x="1160" y="233" font-size="26" font-weight="600" fill="#FFBD59" data-max-width="325">Versioning: BẬT</text>
+
+    <rect x="80" y="310" width="420" height="310" rx="24" fill="#FFFFFF" stroke="#BED0E5" stroke-width="3"/>
+    <text x="112" y="372" font-size="43" font-weight="700" data-max-width="350">V1</text>
+    <text x="112" y="428" font-size="30" font-weight="600" data-max-width="350">Nội dung đúng</text>
+    <text x="112" y="475" font-size="25" fill="#51627B" data-max-width="350">Kế hoạch ban đầu</text>
+    <path d="M112 508H465" stroke="#E3EAF3" stroke-width="2"/>
+    <text x="112" y="553" font-size="24" data-max-width="350">Giữ lại trong lịch sử</text>
+    <text x="112" y="590" font-size="23" fill="#51627B" data-max-width="350">Có version ID riêng</text>
+
+    <path d="M517 460H571" stroke="#FF9900" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="590" y="310" width="420" height="310" rx="24" fill="#FFFFFF" stroke="#BED0E5" stroke-width="3"/>
+    <text x="622" y="372" font-size="43" font-weight="700" data-max-width="350">V2</text>
+    <text x="622" y="428" font-size="30" font-weight="600" data-max-width="350">Nội dung sửa nhầm</text>
+    <text x="622" y="475" font-size="25" fill="#51627B" data-max-width="350">Upload mới, cùng key</text>
+    <path d="M622 508H975" stroke="#E3EAF3" stroke-width="2"/>
+    <text x="622" y="553" font-size="24" data-max-width="350">Giữ lại trong lịch sử</text>
+    <text x="622" y="590" font-size="23" fill="#51627B" data-max-width="350">Có version ID riêng</text>
+
+    <path d="M1027 460H1081" stroke="#FF9900" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="1100" y="310" width="420" height="310" rx="24" fill="#14243B"/>
+    <text x="1132" y="372" font-size="43" font-weight="700" fill="#FFBD59" data-max-width="350">V3</text>
+    <text x="1132" y="428" font-size="30" font-weight="600" fill="#FFFFFF" data-max-width="350">Nội dung của V1</text>
+    <text x="1132" y="475" font-size="25" fill="#FFFFFF" data-max-width="350">Một phiên bản mới</text>
+    <path d="M1132 508H1485" stroke="#51627B" stroke-width="2"/>
+    <text x="1132" y="553" font-size="24" font-weight="700" fill="#FFBD59" data-max-width="350">Bản hiện tại</text>
+    <text x="1132" y="590" font-size="23" fill="#FFFFFF" data-max-width="350">Có version ID riêng</text>
+
+    <rect x="80" y="660" width="890" height="140" rx="22" fill="#FFF0D7"/>
+    <text x="112" y="704" font-size="27" font-weight="700" data-max-width="825">Cách khôi phục trong demo</text>
+    <text x="112" y="750" font-size="26" data-max-width="825">Tải V1 từ S3 → upload lại cùng key → tạo V3.</text>
+    <text x="112" y="783" font-size="23" fill="#51627B" data-max-width="825">Không cần xóa V1 hoặc V2.</text>
+
+    <rect x="1000" y="660" width="520" height="140" rx="22" fill="#FFFFFF" stroke="#BED0E5" stroke-width="2"/>
+    <text x="1028" y="704" font-size="26" font-weight="700" data-max-width="460">V1 + V2 + V3 đều được giữ</text>
+    <text x="1028" y="747" font-size="24" data-max-width="460">Mỗi version là toàn bộ object</text>
+    <text x="1028" y="782" font-size="24" data-max-width="460">và tiếp tục được tính phí lưu.</text>
+
+    <text x="80" y="853" font-size="23" fill="#51627B" data-max-width="1440">Minh họa khái niệm. Đây không phải ảnh AWS Console hay bằng chứng chạy thật.</text>
+  </g>
+</svg>
