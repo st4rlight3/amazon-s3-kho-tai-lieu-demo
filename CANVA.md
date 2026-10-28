@@ -4,7 +4,7 @@ Dùng [canva-noi-dung.txt](canva-noi-dung.txt) để đưa đúng phần chữ n
 
 Thời lượng mục tiêu là **35 phút 30 giây**, đã gồm **7 phút 30 giây demo trực tiếp**. Các trang 27–29 dẫn vào thao tác trên AWS Console; trình chiếu không thay thế phần demo thật.
 
-Repository đã có nội dung được push: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo). Repository hiện **private**; người xem cần được cấp quyền để mở tài liệu. Có thể tạo QR cho địa chỉ repository trên slide 30, kèm lưu ý quyền truy cập; không tạo QR cho presigned URL.
+Repository đã có nội dung được push: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo). Repository hiện **public**; người xem có thể mở tài liệu không cần đăng nhập GitHub. Có thể tạo QR cho địa chỉ repository trên slide 30; không tạo QR cho presigned URL. Bucket S3 của demo vẫn riêng tư.
 
 ## 1. Nội dung nhập cho Canva
 

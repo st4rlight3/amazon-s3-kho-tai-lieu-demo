@@ -4,7 +4,7 @@ Dự án học tập dùng **AWS S3 Console** để lưu một tệp kế hoạc
 
 **Không có ứng dụng web hoặc máy chủ cục bộ cần bật.** Bạn không phải cài Python, Streamlit, HTML, thư viện hay dependency của dự án. “Chạy dự án” nghĩa là đăng nhập AWS, tạo hoặc mở bucket demo và làm ba thao tác bên dưới. Clone repository chỉ tải tài liệu và tệp mẫu, không tự tạo tài nguyên trên AWS.
 
-Repository: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo), hiện **private**; người xem cần quyền truy cập GitHub. Trạng thái kiểm chứng thực tế nằm trong [báo cáo demo](docs/ket-qua-demo.md); các kết quả mô tả dưới đây là tiêu chí cần kiểm tra, không thay cho bằng chứng đã chạy.
+Repository: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo), hiện **public**; người xem có thể mở tài liệu không cần đăng nhập GitHub. Bucket S3 của demo vẫn riêng tư. Trạng thái kiểm chứng thực tế nằm trong [báo cáo demo](docs/ket-qua-demo.md); các kết quả mô tả dưới đây là tiêu chí cần kiểm tra, không thay cho bằng chứng đã chạy.
 
 ## 1. Sản phẩm làm được gì?
 
@@ -33,16 +33,16 @@ flowchart LR
 - Trình duyệt, cửa sổ riêng tư/ẩn danh, mạng ổn định và quyền lưu/mở tệp văn bản trên máy.
 - Kiểm tra Billing/Free Tier thực tế của tài khoản trước khi tạo tài nguyên; không mặc định bài demo miễn phí.
 
-**Cách A — có Git:** dùng tài khoản GitHub đã được cấp quyền vào repo private, rồi chạy:
+**Cách A — có Git:** mở Terminal và chạy; không cần đăng nhập GitHub để clone repository public:
 
 ```bash
 git clone https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo.git
 cd amazon-s3-kho-tai-lieu-demo
 ```
 
-Nếu GitHub yêu cầu đăng nhập, hoàn tất qua cơ chế xác thực GitHub của bạn. Không dán token vào lệnh, URL hoặc tệp dự án. Lỗi “Repository not found” với repo private có thể do chưa đăng nhập hoặc chưa được cấp quyền.
+Nếu clone không thành công, kiểm tra đường dẫn repository và kết nối mạng. Không dán token vào lệnh, URL hoặc tệp dự án.
 
-**Cách B — không dùng Git:** đăng nhập GitHub → mở repository → **Code → Download ZIP** → giải nén. Không cần cài thư viện sau khi tải bằng một trong hai cách.
+**Cách B — không dùng Git:** mở repository → **Code → Download ZIP** → giải nén; không cần đăng nhập GitHub. Không cần cài thư viện sau khi tải bằng một trong hai cách.
 
 Các tệp quan trọng:
 
@@ -155,7 +155,7 @@ Chỉ Delete object thông thường trong bucket bật Versioning có thể th�
 
 | Hiện tượng | Kiểm tra |
 | --- | --- |
-| Clone/ZIP không truy cập repo | Đăng nhập GitHub bằng tài khoản có quyền vào repo private |
+| Clone/ZIP không truy cập repo | Kiểm tra đúng đường dẫn repository public và kết nối mạng; không cần đăng nhập GitHub |
 | Tên bucket không dùng được | Chọn tên riêng có ý nghĩa, đúng quy tắc; không cần thêm ngày hay số tùy tiện |
 | Console báo AccessDenied | Kiểm tra IAM/role với người quản lý tài khoản; không tắt Block Public Access để sửa lỗi |
 | Không thấy nhiều versions | Versioning đã Enabled trước upload chưa? Có cùng key, cùng vị trí không? Bật Show versions |
