@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#F6F8FC"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#14243B">
+<text x="90" y="105" font-size="48" font-weight="700">Kho tài liệu nhóm trên Amazon S3</text>
+<text x="90" y="155" font-size="27" fill="#51627B">Một bucket riêng tư, ba chức năng có thể kiểm chứng</text>
+<rect x="80" y="280" width="360" height="300" rx="24" fill="#FFFFFF" stroke="#BED0E5" stroke-width="3"/>
+<text x="120" y="340" font-size="30" font-weight="700">Người trình bày</text>
+<text x="120" y="400" font-size="26">AWS Console đã đăng nhập</text>
+<text x="120" y="455" font-size="25">Upload và download</text>
+<text x="120" y="500" font-size="25">Chọn phiên bản cần đọc</text>
+<path d="M455 430H590" stroke="#FF9900" stroke-width="8"/>
+<path d="M575 415L600 430L575 445" fill="none" stroke="#FF9900" stroke-width="8"/>
+<rect x="615" y="255" width="410" height="380" rx="24" fill="#14243B"/>
+<text x="655" y="320" font-size="33" font-weight="700" fill="#FFFFFF">Bucket S3 riêng tư</text>
+<text x="655" y="380" font-size="26" fill="#FFFFFF">ke-hoach-nhom.txt</text>
+<text x="655" y="435" font-size="25" fill="#FFFFFF">V1 đúng · V2 sửa nhầm</text>
+<text x="655" y="480" font-size="25" fill="#FFFFFF">V3 khôi phục nội dung V1</text>
+<text x="655" y="550" font-size="24" fill="#FFBD59">Versioning · SSE-S3</text>
+<text x="655" y="590" font-size="24" fill="#FFFFFF">Block Public Access: bật</text>
+<path d="M1045 430H1175" stroke="#FF9900" stroke-width="8"/>
+<path d="M1160 415L1185 430L1160 445" fill="none" stroke="#FF9900" stroke-width="8"/>
+<rect x="1200" y="280" width="320" height="300" rx="24" fill="#FFFFFF" stroke="#BED0E5" stroke-width="3"/>
+<text x="1235" y="340" font-size="30" font-weight="700">Người nhận link</text>
+<text x="1235" y="405" font-size="24">Không cần tài khoản AWS</text>
+<text x="1235" y="455" font-size="24">Đọc qua presigned URL</text>
+<text x="1235" y="505" font-size="24">Chỉ khi URL còn hiệu lực</text>
+<text x="90" y="775" font-size="29" font-weight="600">Không cần ứng dụng web hoặc access key riêng cho bài demo.</text>
+<text x="90" y="830" font-size="23" fill="#51627B">Sơ đồ giải thích phạm vi. Bằng chứng chạy thật nằm trong thư mục ảnh demo.</text>
+</g></svg>

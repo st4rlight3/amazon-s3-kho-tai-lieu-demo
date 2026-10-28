@@ -1,0 +1,218 @@
+Slide 01 — Amazon S3: Lưu trữ đơn giản, hiểu từ một tệp nhỏ
+
+- Amazon Simple Storage Service
+- Từ bài toán lưu tệp đến dịch vụ đám mây
+- Demo: lưu, khôi phục, chia sẻ có thời hạn
+- Nhóm: [điền tên] · Lớp: [điền lớp]
+
+Slide 02 — Một tệp nhóm, ba vấn đề quen thuộc
+
+- Tệp nằm rải rác trên nhiều máy
+- Bản sửa mới làm mất nội dung cũ
+- Chia sẻ nhầm hoặc để link tồn tại quá lâu
+- Cần một nơi lưu với quyền truy cập rõ ràng
+
+Slide 03 — Sau bài này cần hiểu được điều gì?
+
+- Hiểu bucket, object, key và version
+- Giải thích bảo mật, độ bền và chi phí
+- Chọn trường hợp phù hợp với S3
+- Chứng minh ba chức năng bằng demo
+
+Slide 04 — Trước đám mây: Tự chuẩn bị nơi lưu dữ liệu
+
+- Chuẩn bị máy chủ, ổ đĩa và mạng
+- Dự tính dung lượng trước khi sử dụng
+- Theo dõi hỏng hóc, sao lưu và mở rộng
+- Càng tăng dữ liệu, càng thêm việc vận hành
+
+Slide 05 — S3 ra đời để đơn giản hóa lưu trữ qua Internet
+
+- Công bố ngày 14/03/2006
+- Cung cấp lưu trữ qua giao diện web service
+- Cho lập trình viên dùng hạ tầng có thể mở rộng
+- Giảm công việc tự xây và quản lý hạ tầng
+
+Slide 06 — S3 là gì?
+
+- Dịch vụ lưu trữ đối tượng trên AWS
+- Lưu ảnh, tài liệu, video và bản sao lưu
+- Dữ liệu nằm trong bucket dưới dạng object
+- Truy cập bằng Console hoặc API
+
+Slide 07 — Object, file và block khác nhau ở cách làm việc
+
+- File: tổ chức theo tệp và thư mục
+- Block: đọc/ghi các khối trên một volume
+- Object: dữ liệu, metadata và định danh
+- Ví dụ AWS: EFS · EBS · S3
+
+Slide 08 — Bucket: Nơi chứa và cấu hình chung
+
+- Tạo bucket trước khi tải object
+- Chọn tên và một AWS Region
+- Quyền truy cập và Versioning đặt ở cấp bucket
+- Demo dùng một general purpose bucket riêng tư
+
+Slide 09 — Bên trong một object có gì?
+
+- Dữ liệu: nội dung tệp
+- Key: tên dùng để tìm object
+- Metadata: thông tin mô tả
+- Version ID: phân biệt các phiên bản
+
+Slide 10 — Key và prefix: Hiểu đúng “thư mục” trên Console
+
+- Key xác định object trong bucket
+- `tai-lieu/ke-hoach.txt` là một key đầy đủ
+- Prefix giúp nhóm các key có phần đầu giống nhau
+- Demo dùng key gốc `ke-hoach-nhom.txt`
+
+Slide 11 — Region và Availability Zone: Dữ liệu được đặt ở đâu?
+
+- Region: một khu vực địa lý của AWS
+- AZ: một hoặc nhiều trung tâm dữ liệu tách biệt
+- S3 Standard lưu dữ liệu trên ít nhất ba AZ
+- Chọn Region theo vị trí, chi phí và yêu cầu dữ liệu
+
+Slide 12 — Bốn thao tác cơ bản với object
+
+- PUT: ghi object
+- GET: lấy nội dung object
+- LIST: xem danh sách object
+- DELETE: xóa theo trạng thái Versioning
+
+Slide 13 — Khả năng mở rộng: Tăng dữ liệu mà ít quản trị phần cứng
+
+- Lưu số lượng object theo nhu cầu
+- AWS vận hành hạ tầng lưu trữ bên dưới
+- Hiệu năng mở rộng theo tải và thiết kế truy cập
+- Mạng, kích thước tệp và cách dùng vẫn ảnh hưởng
+
+Slide 14 — Giữ được dữ liệu và truy cập được dữ liệu là hai việc
+
+- Durability: khả năng giữ dữ liệu lâu dài
+- Availability: khả năng truy cập khi cần
+- S3 Standard: thiết kế 99.999999999% độ bền
+- S3 Standard: thiết kế 99.99% độ sẵn sàng
+- Versioning vẫn cần để xử lý ghi đè nhầm
+
+Slide 15 — Strong consistency: Ghi thành công, đọc được bản mới
+
+- Ghi mới thành công → đọc thấy object
+- Ghi đè thành công → đọc thấy bản mới
+- LIST phản ánh thay đổi đã thành công
+- Không đồng nghĩa mọi bản sao xuyên Region tức thời
+
+Slide 16 — Trách nhiệm được chia giữa AWS và người dùng
+
+- AWS: hạ tầng chạy dịch vụ
+- Người dùng: dữ liệu và người được truy cập
+- Người dùng: cấu hình, vòng đời và cách sử dụng
+- Bảo mật cần cả dịch vụ lẫn lựa chọn đúng
+
+Slide 17 — Ai được làm gì? Ba công cụ cần phân biệt
+
+- IAM policy: quyền gắn với danh tính
+- Bucket policy: quy tắc gắn với bucket
+- Block Public Access: lớp chặn truy cập công khai
+- Cấp đúng quyền cần dùng, kiểm tra trước khi chia sẻ
+
+Slide 18 — Mã hóa: Bảo vệ dữ liệu khi lưu và khi truyền
+
+- Object mới có mã hóa phía máy chủ mặc định
+- Demo dùng SSE-S3, khóa do S3 quản lý
+- Truy cập bằng HTTPS để bảo vệ đường truyền
+- Quyền truy cập vẫn phải cấu hình đúng
+
+Slide 19 — Versioning: Cùng key, nhiều phiên bản
+
+- Bật Versioning trước khi thử ghi đè
+- Cùng key, nội dung mới → phiên bản mới
+- Chọn version ID để đọc bản trước
+- Khôi phục v1 bằng tải về rồi upload thành v3
+- Mỗi phiên bản tiếp tục dùng dung lượng
+
+Slide 20 — Storage class: Chọn theo tần suất và tốc độ cần đọc
+
+- Standard: truy cập thường xuyên, phù hợp demo
+- Intelligent-Tiering: tần suất khó dự đoán
+- Standard-IA / One Zone-IA: ít truy cập
+- Glacier: nhiều mức truy xuất để lưu trữ dài hạn
+- So cả phí đọc, thời gian chờ và khả năng chịu lỗi
+
+Slide 21 — Lifecycle: Đặt quy tắc cho dữ liệu theo thời gian
+
+- Tự chuyển lớp khi dữ liệu đủ điều kiện
+- Tự hết hạn theo quy tắc đã đặt
+- Có thể quản lý cả các phiên bản cũ
+- Phải xét thời gian lưu và chi phí chuyển lớp
+
+Slide 22 — Chi phí: Không chỉ có dung lượng lưu
+
+- Dung lượng và thời gian lưu, kể cả phiên bản cũ
+- Requests: ghi, đọc, liệt kê và thao tác liên quan
+- Retrieval, truyền dữ liệu và tính năng bổ sung
+- Free Tier phụ thuộc tài khoản và điều kiện hiện hành
+- Demo nhỏ, Standard; theo dõi Billing và dọn sau học
+
+Slide 23 — Ưu điểm: Những việc S3 làm tốt
+
+- Giảm việc tự vận hành hạ tầng lưu trữ
+- Mở rộng theo nhu cầu dữ liệu
+- Nhiều lựa chọn bảo vệ và quản lý object
+- Truy cập qua công cụ hoặc tích hợp vào ứng dụng
+
+Slide 24 — Hạn chế: Khi nào phải cân nhắc thêm?
+
+- Truy cập object khác cách làm việc trên ổ đĩa
+- Phụ thuộc mạng và độ trễ
+- Nhiều lớp phí, cần hiểu cách sử dụng
+- Sai quyền hoặc quy tắc có thể gây hậu quả
+- Archive có thể cần chờ để lấy dữ liệu
+
+Slide 25 — Ứng dụng thực tế: Từ tệp nhóm đến dữ liệu lớn
+
+- Lưu ảnh, tài liệu và nội dung ứng dụng
+- Backup và khôi phục dữ liệu
+- Lưu trữ lâu dài ít truy cập
+- Data lake và dữ liệu đầu vào phân tích
+
+Slide 26 — Sản phẩm demo: Kho tài liệu nhóm trên AWS Console
+
+- Một general purpose bucket, S3 Standard
+- Riêng tư · Versioning bật · SSE-S3
+- Key gốc: `ke-hoach-nhom.txt`
+- Ba chức năng: lưu, phục hồi, chia sẻ tạm thời
+- GitHub chứa tài liệu, mẫu và bằng chứng đã che thông tin
+
+Slide 27 — Demo 1: Tải lên và lấy lại đúng nội dung
+
+- Kiểm tra bucket, Region và Versioning
+- Upload `samples/v1/ke-hoach-nhom.txt` vào gốc
+- Quan sát object có key `ke-hoach-nhom.txt`
+- Download, mở tệp và đối chiếu nội dung v1
+
+Slide 28 — Demo 2: Phục hồi bản đầu mà vẫn giữ lịch sử
+
+- Upload `samples/v2/ke-hoach-nhom.txt` cùng key
+- Xem hai version và đọc nội dung v2
+- Chọn đúng v1 trên S3, tải về và kiểm tra
+- Upload bản vừa phục hồi cùng key để tạo v3
+- Bản hiện tại có nội dung v1; lịch sử vẫn còn
+
+Slide 29 — Demo 3: Chia sẻ đọc tạm thời, bucket vẫn riêng tư
+
+- Mở Object URL thường trong cửa sổ riêng tư: bị chặn
+- Tạo presigned URL đọc, thời hạn 1 phút
+- Mở link tạm thời: đọc được object
+- Sau hạn, tạo request mới: truy cập bị từ chối
+- Block Public Access vẫn bật
+
+Slide 30 — Ba điều cần nhớ và trao đổi với thầy
+
+- S3 lưu object theo bucket và key
+- Versioning giữ lịch sử; presigned URL chia sẻ có hạn
+- Dùng đúng quyền, lớp lưu trữ và cách tính phí
+- Câu hỏi: Vì sao URL thường bị chặn mà link tạm mở được?
+- GitHub: [dán liên kết repository sau khi push]

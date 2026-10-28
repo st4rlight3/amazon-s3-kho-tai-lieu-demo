@@ -1,0 +1,9 @@
+KHO TAI LIEU NHOM - BAN DUNG V1
+
+Chu de: Tim hieu Amazon S3
+Lich demo: Thu Sau, 14:00
+Dia diem: Phong A101
+Noi dung: Tai tep, khoi phuc phien ban, chia se co thoi han.
+
+Day la du lieu gia lap de thuc hanh, khong co thong tin ca nhan.
+Khi khoi phuc thanh cong, can thay lai dong: Lich demo: Thu Sau, 14:00

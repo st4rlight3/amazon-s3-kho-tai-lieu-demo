@@ -1,0 +1,9 @@
+KHO TAI LIEU NHOM - BAN SUA NHAM V2
+
+Chu de: Tim hieu Amazon S3
+Lich demo: Thu Hai, 08:00 (SUA NHAM)
+Dia diem: Phong B999 (SUA NHAM)
+Noi dung: Tai tep, khoi phuc phien ban, chia se co thoi han.
+
+Day la tinh huong co y sua sai de minh hoa S3 Versioning.
+Muc tieu: Khoi phuc noi dung V1 va van giu lai lich su V2.

@@ -1,0 +1,19 @@
+# Credentials and local settings
+.aws/
+.env
+.env.*
+!.env.example
+credentials
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Private execution details, downloads, and temporary artifacts
+private/
+downloads/
+tmp/
+.tools/
+*.log
+.DS_Store
+Thumbs.db
