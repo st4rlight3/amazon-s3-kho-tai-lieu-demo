@@ -1,0 +1,255 @@
+Tạo bộ thuyết trình TIẾNG VIỆT, đúng 30 slide, tỷ lệ 16:9, chủ đề Amazon S3: Kho tài liệu nhóm. Đối tượng là sinh viên và giảng viên. Nội dung để trình bày trong 30–40 phút, với phần demo AWS Console ở cuối. Chủ đề luôn là Amazon S3; không chuyển nội dung thành Amazon EC2 hoặc TaskFlow theo ảnh tham chiếu.
+
+Nguồn nội dung duy nhất là danh sách 30 slide được dán sau yêu cầu này. Giữ đúng thứ tự, tiêu đề và các ý; không tự thêm số liệu, ví dụ sản phẩm, chức năng hoặc lời hứa của AWS. Không gộp hoặc tách slide. Các chỗ [điền tên] và [điền lớp] để nhóm tự cập nhật.
+
+Phong cách thiết kế: hội nghị công nghệ hiện đại, chuyên nghiệp, có chất biên tập. Nền sống động nhờ nhiều lớp, tương phản, ánh sáng và nhịp bố cục; tạo cảm giác trưởng thành và rõ ràng. Dùng deep navy #0B1220 hoặc charcoal #111820 làm nền chính, chữ trắng ngà #F2F7FF, điểm sáng cyan #38C6E8 và cam #FF9B42 tiết chế.
+
+Tạo chiều sâu bằng gradient tối tinh tế, ánh sáng cyan/cam ở mép, lưới mảnh, đường luồng dữ liệu và hình học trừu tượng. Các lớp nền nằm sau chữ chỉ khoảng 7–15% độ đậm/opacity, giữ vùng đọc sạch. Có thể dùng chọn lọc ảnh thật của trung tâm dữ liệu ở trang mở đầu hoặc chuyển phần; không dùng ảnh trang trí dày đặc trên mọi slide. Tuyệt đối tránh chữ trắng trên nền trắng hoặc mảng nền sáng không có tương phản.
+
+Không dùng nhân vật hoạt hình, người tí hon, đám mây/máy chủ 3D kiểu đồ chơi, laptop mockup, hình truyện tranh, mascot 3D, pastel clipart hay icon ngộ nghĩnh. Không sao chép phong cách đồ họa hoạt hình từ ảnh tham chiếu. Hình chính ưu tiên ảnh AWS Console thật đã che thông tin, sơ đồ kiến trúc, sơ đồ Versioning, luồng truy cập, bảng và timeline chính xác.
+
+Dùng font sans serif có đủ dấu tiếng Việt; tiêu đề 40–48 pt, nội dung 24–28 pt, nguồn nhỏ hơn ở chân trang. Nhấn từ khóa và số liệu bằng phân cấp cỡ chữ, độ đậm và một màu điểm nhấn. Tiêu đề dài được xuống hai dòng; giữ tương phản mạnh và không thu nhỏ nội dung để nhồi chữ.
+
+Mỗi trang tập trung vào một thông điệp. Luân phiên bố cục: tiêu đề lớn với khoảng trống, chữ bên trái/hình bên phải, hai cột đối chiếu, timeline ngang, bảng ngắn và ảnh bằng chứng cắt gọn. Dùng đường phân cách, khung ảnh và mảng tối có chủ đích để nền có nhịp, không lặp một bố cục suốt 30 trang. Căn lề, số trang và vị trí nguồn thống nhất; chỉ dùng chuyển cảnh nhẹ.
+
+Phân biệt durability là độ bền dữ liệu với availability là độ sẵn sàng. Với S3 Standard, giữ đúng số 99.999999999% và 99.99%, tương ứng; ghi là “được thiết kế cho”, không chuyển thành bảo đảm tuyệt đối. Không áp hai số này cho mọi storage class.
+
+Demo có đúng ba chức năng: upload/download, khôi phục nội dung bằng Versioning, chia sẻ qua presigned URL. Phạm vi là một general purpose bucket riêng tư, S3 Standard, Block Public Access bật, ACL disabled/Bucket owner enforced và SSE-S3. Không thêm ứng dụng web, mã HTML/Python, website hosting, IAM access key hoặc một bucket công khai.
+
+Khi minh họa khôi phục, dùng dòng v1 → v2 → v3, với nội dung v1 được tải về rồi upload lại thành v3 cùng key. Đừng vẽ thao tác xóa v2. v1/v2/v3 là cách gọi trong bài, không phải định dạng Version ID thật của AWS.
+
+Ảnh demo sẽ do nhóm tải lên từ repo và gán đúng trang theo bảng ảnh kèm theo. Chỉ dùng ảnh thực có; không tạo ảnh giả giao diện AWS để làm bằng chứng. Không hiển thị presigned URL thật, chữ ký URL, thông tin đăng nhập hay tài khoản AWS. Nếu chưa có ảnh, để ô giữ chỗ ghi rõ “Chèn ảnh demo thật sau khi kiểm tra”.
+
+Đặt lời thuyết trình dài trong ghi chú, không dùng để tăng chữ trên mặt slide. Duy trì các trích dẫn AWS lấy từ dàn ý đầy đủ ở chân trang tương ứng; không tự phát minh nguồn.
+
+DANH SÁCH NỘI DUNG 30 SLIDE:
+
+Slide 01 — Amazon S3: Lưu trữ đơn giản, hiểu từ một tệp nhỏ
+- Amazon Simple Storage Service
+- Từ bài toán lưu tệp đến dịch vụ đám mây
+- Demo: lưu, khôi phục, chia sẻ có thời hạn
+- Nhóm: [điền tên] · Lớp: [điền lớp]
+Nguồn đặt nhỏ ở chân slide: Phạm vi và mục tiêu do nhóm thiết kế.
+
+Slide 02 — Một tệp nhóm, ba vấn đề quen thuộc
+- Tệp nằm rải rác trên nhiều máy
+- Bản sửa mới làm mất nội dung cũ
+- Chia sẻ nhầm hoặc để link tồn tại quá lâu
+- Cần một nơi lưu với quyền truy cập rõ ràng
+Nguồn đặt nhỏ ở chân slide: Tình huống minh họa do nhóm xây dựng.
+
+Slide 03 — Sau bài này cần hiểu được điều gì?
+- Hiểu bucket, object, key và version
+- Giải thích bảo mật, độ bền và chi phí
+- Chọn trường hợp phù hợp với S3
+- Chứng minh ba chức năng bằng demo
+Nguồn đặt nhỏ ở chân slide: Cấu trúc bài trình bày do nhóm thiết kế.
+
+Slide 04 — Trước đám mây: Tự chuẩn bị nơi lưu dữ liệu
+- Chuẩn bị máy chủ, ổ đĩa và mạng
+- Dự tính dung lượng trước khi sử dụng
+- Theo dõi hỏng hóc, sao lưu và mở rộng
+- Càng tăng dữ liệu, càng thêm việc vận hành
+Nguồn đặt nhỏ ở chân slide: Bối cảnh hạ tầng trong [AWS — Our Origins](https://aws.amazon.com/about-aws/our-origins/); ví dụ lớp học do nhóm diễn giải.
+
+Slide 05 — S3 ra đời để đơn giản hóa lưu trữ qua Internet
+- Công bố ngày 14/03/2006
+- Cung cấp lưu trữ qua giao diện web service
+- Cho lập trình viên dùng hạ tầng có thể mở rộng
+- Giảm công việc tự xây và quản lý hạ tầng
+Nguồn đặt nhỏ ở chân slide: [Amazon Press Center — Amazon Web Services Launches, 14/03/2006](https://press.aboutamazon.com/2006/3/amazon-web-services-launches).
+
+Slide 06 — S3 là gì?
+- Dịch vụ lưu trữ đối tượng trên AWS
+- Lưu ảnh, tài liệu, video và bản sao lưu
+- Dữ liệu nằm trong bucket dưới dạng object
+- Truy cập bằng Console hoặc API
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — What is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html).
+
+Slide 07 — Object, file và block khác nhau ở cách làm việc
+- File: tổ chức theo tệp và thư mục
+- Block: đọc/ghi các khối trên một volume
+- Object: dữ liệu, metadata và định danh
+- Ví dụ AWS: EFS · EBS · S3
+Nguồn đặt nhỏ ở chân slide: [AWS — Block vs. File vs. Object Storage](https://aws.amazon.com/compare/the-difference-between-block-file-object-storage/).
+
+Slide 08 — Bucket: Nơi chứa và cấu hình chung
+- Tạo bucket trước khi tải object
+- Chọn tên và một AWS Region
+- Quyền truy cập và Versioning đặt ở cấp bucket
+- Demo dùng một general purpose bucket riêng tư
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — General purpose buckets overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html).
+
+Slide 09 — Bên trong một object có gì?
+- Dữ liệu: nội dung tệp
+- Key: tên dùng để tìm object
+- Metadata: thông tin mô tả
+- Version ID: phân biệt các phiên bản
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Amazon S3 objects overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingObjects.html).
+
+Slide 10 — Key và prefix: Hiểu đúng “thư mục” trên Console
+- Key xác định object trong bucket
+- `tai-lieu/ke-hoach.txt` là một key đầy đủ
+- Prefix giúp nhóm các key có phần đầu giống nhau
+- Demo dùng key gốc `ke-hoach-nhom.txt`
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Naming Amazon S3 objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
+
+Slide 11 — Region và Availability Zone: Dữ liệu được đặt ở đâu?
+- Region: một khu vực địa lý của AWS
+- AZ: một hoặc nhiều trung tâm dữ liệu tách biệt
+- S3 Standard lưu dữ liệu trên ít nhất ba AZ
+- Chọn Region theo vị trí, chi phí và yêu cầu dữ liệu
+Nguồn đặt nhỏ ở chân slide: [AWS — Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/); [AWS — S3 storage class comparison](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html).
+
+Slide 12 — Bốn thao tác cơ bản với object
+- PUT: ghi object
+- GET: lấy nội dung object
+- LIST: xem danh sách object
+- DELETE: xóa theo trạng thái Versioning
+Nguồn đặt nhỏ ở chân slide: AWS API Reference: [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html), [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html), [ListObjectsV2](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html), [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html).
+
+Slide 13 — Khả năng mở rộng: Tăng dữ liệu mà ít quản trị phần cứng
+- Lưu số lượng object theo nhu cầu
+- AWS vận hành hạ tầng lưu trữ bên dưới
+- Hiệu năng mở rộng theo tải và thiết kế truy cập
+- Mạng, kích thước tệp và cách dùng vẫn ảnh hưởng
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Optimizing Amazon S3 performance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html); [AWS — Uploading objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html).
+
+Slide 14 — Giữ được dữ liệu và truy cập được dữ liệu là hai việc
+- Durability: khả năng giữ dữ liệu lâu dài
+- Availability: khả năng truy cập khi cần
+- S3 Standard: thiết kế 99.999999999% độ bền
+- S3 Standard: thiết kế 99.99% độ sẵn sàng
+- Versioning vẫn cần để xử lý ghi đè nhầm
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Data protection in Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/DataDurability.html).
+
+Slide 15 — Strong consistency: Ghi thành công, đọc được bản mới
+- Ghi mới thành công → đọc thấy object
+- Ghi đè thành công → đọc thấy bản mới
+- LIST phản ánh thay đổi đã thành công
+- Không đồng nghĩa mọi bản sao xuyên Region tức thời
+Nguồn đặt nhỏ ở chân slide: [AWS — Amazon S3 Strong Consistency](https://aws.amazon.com/s3/consistency/).
+
+Slide 16 — Trách nhiệm được chia giữa AWS và người dùng
+- AWS: hạ tầng chạy dịch vụ
+- Người dùng: dữ liệu và người được truy cập
+- Người dùng: cấu hình, vòng đời và cách sử dụng
+- Bảo mật cần cả dịch vụ lẫn lựa chọn đúng
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Security in Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security.html).
+
+Slide 17 — Ai được làm gì? Ba công cụ cần phân biệt
+- IAM policy: quyền gắn với danh tính
+- Bucket policy: quy tắc gắn với bucket
+- Block Public Access: lớp chặn truy cập công khai
+- Cấp đúng quyền cần dùng, kiểm tra trước khi chia sẻ
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Access control in Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-management.html); [AWS — Configuring Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-block-public-access-bucket.html).
+
+Slide 18 — Mã hóa: Bảo vệ dữ liệu khi lưu và khi truyền
+- Object mới có mã hóa phía máy chủ mặc định
+- Demo dùng SSE-S3, khóa do S3 quản lý
+- Truy cập bằng HTTPS để bảo vệ đường truyền
+- Quyền truy cập vẫn phải cấu hình đúng
+Nguồn đặt nhỏ ở chân slide: [AWS — Default encryption FAQ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-encryption-faq.html); [AWS — Security best practices for S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html).
+
+Slide 19 — Versioning: Cùng key, nhiều phiên bản
+- Bật Versioning trước khi thử ghi đè
+- Cùng key, nội dung mới → phiên bản mới
+- Chọn version ID để đọc bản trước
+- Khôi phục v1 bằng tải về rồi upload thành v3
+- Mỗi phiên bản tiếp tục dùng dung lượng
+Nguồn đặt nhỏ ở chân slide: [AWS — S3 Versioning](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html); [AWS — Restoring previous versions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/RestoringPreviousVersions.html).
+
+Slide 20 — Storage class: Chọn theo tần suất và tốc độ cần đọc
+- Standard: truy cập thường xuyên, phù hợp demo
+- Intelligent-Tiering: tần suất khó dự đoán
+- Standard-IA / One Zone-IA: ít truy cập
+- Glacier: nhiều mức truy xuất để lưu trữ dài hạn
+- So cả phí đọc, thời gian chờ và khả năng chịu lỗi
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Understanding and managing Amazon S3 storage classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html).
+
+Slide 21 — Lifecycle: Đặt quy tắc cho dữ liệu theo thời gian
+- Tự chuyển lớp khi dữ liệu đủ điều kiện
+- Tự hết hạn theo quy tắc đã đặt
+- Có thể quản lý cả các phiên bản cũ
+- Phải xét thời gian lưu và chi phí chuyển lớp
+Nguồn đặt nhỏ ở chân slide: [AWS User Guide — Managing the lifecycle of objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html).
+
+Slide 22 — Chi phí: Không chỉ có dung lượng lưu
+- Dung lượng và thời gian lưu, kể cả phiên bản cũ
+- Requests: ghi, đọc, liệt kê và thao tác liên quan
+- Retrieval, truyền dữ liệu và tính năng bổ sung
+- Free Tier phụ thuộc tài khoản và điều kiện hiện hành
+- Demo nhỏ, Standard; theo dõi Billing và dọn sau học
+Nguồn đặt nhỏ ở chân slide: [AWS — Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/); [AWS Billing — Explore AWS services with AWS Free Tier](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier.html).
+
+Slide 23 — Ưu điểm: Những việc S3 làm tốt
+- Giảm việc tự vận hành hạ tầng lưu trữ
+- Mở rộng theo nhu cầu dữ liệu
+- Nhiều lựa chọn bảo vệ và quản lý object
+- Truy cập qua công cụ hoặc tích hợp vào ứng dụng
+Nguồn đặt nhỏ ở chân slide: Tổng hợp từ các slide 06, 13, 16–19; đối chiếu [AWS — Amazon S3](https://aws.amazon.com/s3/).
+
+Slide 24 — Hạn chế: Khi nào phải cân nhắc thêm?
+- Truy cập object khác cách làm việc trên ổ đĩa
+- Phụ thuộc mạng và độ trễ
+- Nhiều lớp phí, cần hiểu cách sử dụng
+- Sai quyền hoặc quy tắc có thể gây hậu quả
+- Archive có thể cần chờ để lấy dữ liệu
+Nguồn đặt nhỏ ở chân slide: [AWS — Block, file, object comparison](https://aws.amazon.com/compare/the-difference-between-block-file-object-storage/); [AWS — Storage classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html); [AWS — S3 Pricing](https://aws.amazon.com/s3/pricing/).
+
+Slide 25 — Ứng dụng thực tế: Từ tệp nhóm đến dữ liệu lớn
+- Lưu ảnh, tài liệu và nội dung ứng dụng
+- Backup và khôi phục dữ liệu
+- Lưu trữ lâu dài ít truy cập
+- Data lake và dữ liệu đầu vào phân tích
+Nguồn đặt nhỏ ở chân slide: [AWS — Amazon S3 use cases](https://aws.amazon.com/s3/); [AWS User Guide — What is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html).
+
+Slide 26 — Sản phẩm demo: Kho tài liệu nhóm trên AWS Console
+- Một general purpose bucket, S3 Standard
+- Riêng tư · Versioning bật · SSE-S3
+- Key gốc: `ke-hoach-nhom.txt`
+- Ba chức năng: lưu, phục hồi, chia sẻ tạm thời
+- GitHub chứa tài liệu, mẫu và bằng chứng đã che thông tin
+Nguồn đặt nhỏ ở chân slide: Kiến trúc demo do nhóm thiết kế; cơ chế Console/API tại [AWS — General purpose buckets overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html).
+
+Slide 27 — Demo 1: Tải lên và lấy lại đúng nội dung
+- Kiểm tra bucket, Region và Versioning
+- Upload `samples/v1/ke-hoach-nhom.txt` vào gốc
+- Quan sát object có key `ke-hoach-nhom.txt`
+- Download, mở tệp và đối chiếu nội dung v1
+Nguồn đặt nhỏ ở chân slide: [AWS — Uploading objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html); [AWS — Downloading objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/download-objects.html).
+
+Slide 28 — Demo 2: Phục hồi bản đầu mà vẫn giữ lịch sử
+- Upload `samples/v2/ke-hoach-nhom.txt` cùng key
+- Xem hai version và đọc nội dung v2
+- Chọn đúng v1 trên S3, tải về và kiểm tra
+- Upload bản vừa phục hồi cùng key để tạo v3
+- Bản hiện tại có nội dung v1; lịch sử vẫn còn
+Nguồn đặt nhỏ ở chân slide: [AWS — Restoring previous versions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/RestoringPreviousVersions.html); [AWS — Uploading objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html).
+
+Slide 29 — Demo 3: Chia sẻ đọc tạm thời, bucket vẫn riêng tư
+- Mở Object URL thường trong cửa sổ riêng tư: bị chặn
+- Tạo presigned URL đọc, thời hạn 1 phút
+- Mở link tạm thời: đọc được object
+- Sau hạn, tạo request mới: truy cập bị từ chối
+- Block Public Access vẫn bật
+Nguồn đặt nhỏ ở chân slide: [AWS — Download and upload objects with presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html); [AWS — Sharing objects with presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+
+Slide 30 — Ba điều cần nhớ và trao đổi với thầy
+- S3 lưu object theo bucket và key
+- Versioning giữ lịch sử; presigned URL chia sẻ có hạn
+- Dùng đúng quyền, lớp lưu trữ và cách tính phí
+- Câu hỏi: Vì sao URL thường bị chặn mà link tạm mở được?
+- GitHub: https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo
+Nguồn đặt nhỏ ở chân slide: Tổng hợp các phần đã trình bày; xem [Danh mục nguồn AWS đã đối chiếu](nguon-tham-khao.md).
+
+ANH DINH KEM VA VI TRI CHEN
+Chon anh thuc tu thu muc anh-demo, khong ve lai giao dien AWS bang AI.
+01-bucket-rieng-tu.jpg: slide 17 va 26.
+02-upload-thanh-cong.jpg: slide 27.
+03-cac-phien-ban.jpg: slide 19 va 28.
+04-khoi-phuc-v1.jpg: slide 28.
+05-truy-cap-bi-chan.jpg, 06-link-tam-thoi.jpg, 07-link-het-han.jpg: slide 29, ba trang thai Khong co quyen / Duoc chia se / Het han.
+08-versioning-enabled.jpg: slide 19 va 26.
+Ba SVG trong thu muc so-do la so do khai niem tuy chon, khong phai bang chung da chay.
+Neu Canva chi nhan duoc mot phan noi dung, tao theo ba nhom 01-10, 11-20, 21-30 trong cung mot thiet ke, giu nguyen phong cach va thu tu.

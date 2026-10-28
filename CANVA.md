@@ -11,13 +11,19 @@ Repository đã có nội dung được push: [st4rlight3/amazon-s3-kho-tai-lieu
 Sao chép phần yêu cầu dưới đây, rồi dán toàn bộ nội dung trong `canva-noi-dung.txt` ngay sau yêu cầu. Nếu công cụ tạo chưa đủ 30 trang, giữ nguyên danh sách nội dung và bổ sung các trang còn thiếu theo đúng số thứ tự, không yêu cầu công cụ tự nghĩ thêm ý.
 
 ```text
-Tạo bộ thuyết trình TIẾNG VIỆT, đúng 30 slide, tỷ lệ 16:9, chủ đề Amazon S3. Đối tượng là sinh viên và giảng viên. Nội dung để trình bày trong 30–40 phút, với phần demo AWS Console ở cuối.
+Tạo bộ thuyết trình TIẾNG VIỆT, đúng 30 slide, tỷ lệ 16:9, chủ đề Amazon S3: Kho tài liệu nhóm. Đối tượng là sinh viên và giảng viên. Nội dung để trình bày trong 30–40 phút, với phần demo AWS Console ở cuối. Chủ đề luôn là Amazon S3; không chuyển nội dung thành Amazon EC2 hoặc TaskFlow theo ảnh tham chiếu.
 
 Nguồn nội dung duy nhất là danh sách 30 slide được dán sau yêu cầu này. Giữ đúng thứ tự, tiêu đề và các ý; không tự thêm số liệu, ví dụ sản phẩm, chức năng hoặc lời hứa của AWS. Không gộp hoặc tách slide. Các chỗ [điền tên] và [điền lớp] để nhóm tự cập nhật.
 
-Thiết kế dễ đọc khi chiếu trong lớp: nền trắng ngà hoặc xanh navy, chữ tương phản cao, màu cam làm điểm nhấn. Gợi ý bảng màu: navy #14213D, trắng #FAFBFD, cam #F59E0B. Dùng một font sans serif có đủ dấu tiếng Việt. Tiêu đề khoảng 32–44 pt, nội dung 24–28 pt; chỉ dùng cỡ nhỏ hơn cho nguồn ở chân trang. Tiêu đề dài được xuống hai dòng, không thu nhỏ chữ quá mức.
+Phong cách thiết kế: hội nghị công nghệ hiện đại, chuyên nghiệp, có chất biên tập. Nền sống động nhờ nhiều lớp, tương phản, ánh sáng và nhịp bố cục; tạo cảm giác trưởng thành và rõ ràng. Dùng deep navy #0B1220 hoặc charcoal #111820 làm nền chính, chữ trắng ngà #F2F7FF, điểm sáng cyan #38C6E8 và cam #FF9B42 tiết chế.
 
-Mỗi trang tập trung vào một thông điệp và một hình chính. Ưu tiên sơ đồ đơn giản, bảng ngắn, timeline hoặc thẻ thông tin; tránh đoạn văn dài và hình trang trí lấn chữ. Căn lề, số trang và vị trí nguồn thống nhất. Dùng hiệu ứng xuất hiện nhẹ, không cần âm thanh hay chuyển cảnh phức tạp.
+Tạo chiều sâu bằng gradient tối tinh tế, ánh sáng cyan/cam ở mép, lưới mảnh, đường luồng dữ liệu và hình học trừu tượng. Các lớp nền nằm sau chữ chỉ khoảng 7–15% độ đậm/opacity, giữ vùng đọc sạch. Có thể dùng chọn lọc ảnh thật của trung tâm dữ liệu ở trang mở đầu hoặc chuyển phần; không dùng ảnh trang trí dày đặc trên mọi slide. Tuyệt đối tránh chữ trắng trên nền trắng hoặc mảng nền sáng không có tương phản.
+
+Không dùng nhân vật hoạt hình, người tí hon, đám mây/máy chủ 3D kiểu đồ chơi, laptop mockup, hình truyện tranh, mascot 3D, pastel clipart hay icon ngộ nghĩnh. Không sao chép phong cách đồ họa hoạt hình từ ảnh tham chiếu. Hình chính ưu tiên ảnh AWS Console thật đã che thông tin, sơ đồ kiến trúc, sơ đồ Versioning, luồng truy cập, bảng và timeline chính xác.
+
+Dùng font sans serif có đủ dấu tiếng Việt; tiêu đề 40–48 pt, nội dung 24–28 pt, nguồn nhỏ hơn ở chân trang. Nhấn từ khóa và số liệu bằng phân cấp cỡ chữ, độ đậm và một màu điểm nhấn. Tiêu đề dài được xuống hai dòng; giữ tương phản mạnh và không thu nhỏ nội dung để nhồi chữ.
+
+Mỗi trang tập trung vào một thông điệp. Luân phiên bố cục: tiêu đề lớn với khoảng trống, chữ bên trái/hình bên phải, hai cột đối chiếu, timeline ngang, bảng ngắn và ảnh bằng chứng cắt gọn. Dùng đường phân cách, khung ảnh và mảng tối có chủ đích để nền có nhịp, không lặp một bố cục suốt 30 trang. Căn lề, số trang và vị trí nguồn thống nhất; chỉ dùng chuyển cảnh nhẹ.
 
 Phân biệt durability là độ bền dữ liệu với availability là độ sẵn sàng. Với S3 Standard, giữ đúng số 99.999999999% và 99.99%, tương ứng; ghi là “được thiết kế cho”, không chuyển thành bảo đảm tuyệt đối. Không áp hai số này cho mọi storage class.
 
@@ -39,6 +45,8 @@ Nếu Canva không tiếp nhận hết nội dung một lượt, nhập theo ba 
 
 Tải các ảnh JPG dưới đây từ `assets/demo/` khi chúng thực sự đã được chụp và kiểm tra. Danh mục này mô tả ảnh cần có; xem [báo cáo demo](docs/ket-qua-demo.md) để biết trạng thái chạy thật. Trước khi chia sẻ hoặc tải ảnh lên Canva, che toàn bộ URL đã ký và thông tin tài khoản.
 
+`bo-canva-s3.zip` là gói tải về để **giải nén trên máy**, không phải file đưa vào Canva để tự tạo thiết kế. Sau khi giải nén, dán prompt và nội dung chữ, rồi **tải riêng các ảnh JPG** lên Canva. Các SVG minh họa ở phần tiếp theo dùng tùy chọn.
+
 | Tệp trong `assets/demo/` | Slide chính | Cách dùng |
 | --- | --- | --- |
 | `01-bucket-rieng-tu.jpg` | 17, 26 | Cắt vùng bucket demo và Block Public Access; thêm nhãn “Private” |
@@ -48,6 +56,7 @@ Tải các ảnh JPG dưới đây từ `assets/demo/` khi chúng thực sự đ
 | `05-truy-cap-bi-chan.jpg` | 17, 29 | Trạng thái “Không có quyền” khi dùng URL thường |
 | `06-link-tam-thoi.jpg` | 29 | Trạng thái “Được chia sẻ” khi dùng URL còn hạn |
 | `07-link-het-han.jpg` | 29 | Trạng thái “Hết hạn” với một yêu cầu mới |
+| `08-versioning-enabled.jpg` | 19, 26 | Bằng chứng Versioning Enabled và Region Sydney; cắt gọn vùng cấu hình |
 
 Slide 29 có thể dùng ba ảnh 05–07 theo hàng ngang, mỗi ảnh một trạng thái và một nhãn ngắn. Cắt gọn để chữ lỗi hoặc nội dung tài liệu đọc được; không cần chụp toàn bộ trình duyệt. Slide 08 có thể tái sử dụng ảnh 01 nếu phù hợp, nhưng sơ đồ bucket trong dàn ý đã đủ giải thích khái niệm.
 
@@ -55,7 +64,7 @@ Danh mục gốc: [assets/demo/README.md](assets/demo/README.md). Các đường
 
 ### Sơ đồ minh họa có sẵn, dùng tùy chọn
 
-Ba file SVG dưới đây là **sơ đồ khái niệm do nhóm thiết kế**, không phải ảnh chụp AWS và không phải bằng chứng demo đã chạy. Có thể dùng trực tiếp như hình minh họa hoặc dựng lại bằng các khối trong Canva; chúng không thay thế bảy ảnh kết quả thật ở trên.
+Ba file SVG dưới đây là **sơ đồ khái niệm do nhóm thiết kế**, không phải ảnh chụp AWS và không phải bằng chứng demo đã chạy. Có thể dùng trực tiếp như hình minh họa hoặc dựng lại bằng các khối trong Canva; chúng không thay thế tám ảnh kết quả thật ở trên.
 
 | Sơ đồ | Slide gợi ý | Ý cần giải thích |
 | --- | --- | --- |
@@ -78,6 +87,7 @@ Ba file SVG dưới đây là **sơ đồ khái niệm do nhóm thiết kế**, 
 - [ ] Đúng 30 trang và thứ tự; tên nhóm/lớp đã thay.
 - [ ] Không lỗi dấu tiếng Việt, chữ tràn khung hoặc tỷ lệ phần trăm bị đổi.
 - [ ] Mọi chữ chính đọc được trên màn chiếu; đồ họa chỉ hỗ trợ một ý mỗi trang.
+- [ ] Nền có chiều sâu nhưng ít tương phản sau chữ; không có hoạt hình, đồ chơi 3D hoặc chữ trắng trên trắng.
 - [ ] Slide 14 phân biệt đúng hai chỉ số; slide 19 thể hiện bản phục hồi thành version mới.
 - [ ] Ảnh thật đã che thông tin; không có URL đã ký hoặc ảnh giả làm bằng chứng.
 - [ ] Ghi chú đủ lời nói, nguồn bấm được và khớp trang.
