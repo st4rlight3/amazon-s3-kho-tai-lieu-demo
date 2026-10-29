@@ -1,10 +1,10 @@
 # Amazon S3: Kho tài liệu nhóm
 
-Dự án học tập dùng **AWS S3 Console** để lưu một tệp kế hoạch, phục hồi khi sửa nhầm và chia sẻ có thời hạn. **Bản trình chiếu chính gồm 45 slide**, hướng tới **30–40 phút**, với ba chức năng demo ở phần cuối. Đây là thời lượng mục tiêu; nhóm cần tập toàn bài để căn thời gian thực tế.
+Dự án học tập dùng **AWS S3 Console** để lưu một tệp kế hoạch, phục hồi khi sửa nhầm và chia sẻ có thời hạn. Bản trình chiếu chính là **bản gốc Canva**, kèm tài liệu hướng dẫn thực hiện ba chức năng demo.
 
-Mở [PowerPoint 45 slide](slides/Amazon-S3-CloudNotes-45-slide.pptx) để trình chiếu hoặc nhập vào Canva, kèm [dàn ý 45 slide](docs/dan-y-45-slide.md) để chuẩn bị lời nói. [CANVA.md](CANVA.md) hướng dẫn kiểm tra bản nhập. Bộ 30 slide, các tệp nội dung nhập Canva cũ và ZIP cũ được giữ làm tài liệu tham khảo.
+Tải [PowerPoint bản gốc Canva](slides/Amazon-S3-ban-goc-Canva.pptx) để lưu hoặc trình chiếu. [CANVA.md](CANVA.md) tập hợp liên kết bản gốc và tài liệu demo. Bộ dàn ý 30 slide, các tệp nội dung nhập Canva cũ và ZIP cũ được giữ làm tài liệu tham khảo.
 
-Xem trực tuyến: **[45 slide trên Canva](https://canva.link/578jhfpdcv8ehhh)**. Đây là liên kết chỉ xem công khai, không cần đăng nhập.
+Xem trực tuyến: **[Bản gốc trên Canva](https://canva.link/67bxz0ua9w88aoh)**.
 
 **Không có ứng dụng web hoặc máy chủ cục bộ cần bật.** Bạn không phải cài Python, Streamlit, HTML, thư viện hay dependency của dự án. “Chạy dự án” nghĩa là đăng nhập AWS, tạo hoặc mở bucket demo và làm ba thao tác bên dưới. Clone repository chỉ tải tài liệu và tệp mẫu, không tự tạo tài nguyên trên AWS.
 
@@ -55,9 +55,8 @@ samples/v1/ke-hoach-nhom.txt     Bản kế hoạch đúng: Thu Sau, 14:00
 samples/v2/ke-hoach-nhom.txt     Bản sửa nhầm: Thu Hai, 08:00
 docs/demo-aws-console.md        Hướng dẫn chi tiết và kịch bản demo
 docs/ket-qua-demo.md            Kết quả quan sát thực tế
-slides/Amazon-S3-CloudNotes-45-slide.pptx  Bản trình chiếu chính, 45 slide
-docs/dan-y-45-slide.md          Nội dung và gợi ý nói cho bản chính
-CANVA.md                       Cách nhập và kiểm tra bản 45 slide trong Canva
+slides/Amazon-S3-ban-goc-Canva.pptx  Bản trình chiếu gốc xuất từ Canva
+CANVA.md                       Liên kết bản gốc và tài liệu demo
 ```
 
 Mở cả hai tệp mẫu để thấy nội dung khác nhau. Hai file cố ý có **cùng tên**; khi upload chỉ chọn file bên trong, không upload cả thư mục `v1` hoặc `v2`.
@@ -130,7 +129,7 @@ Bucket không cần lệnh “start”. Sau khi cấu hình xong, lần sau ch�
 
 **Kết quả cần thấy:** URL thường bị chặn → URL có chữ ký còn hạn tải được → yêu cầu mới sau hạn bị chặn. Block Public Access vẫn bật suốt quá trình. Một file đã tải hoặc trang trong cache không tự biến mất khi link hết hạn.
 
-Khi đã tập quen, có thể chọn **1 phút cho phần live demo** để giảm thời gian chờ. Chọn đúng hạn mới ở bước tạo URL và chờ đủ hạn đó trước khi thử lại; không sửa con số trong URL. Căn thời gian ba chức năng khi tập toàn bài 45 slide.
+Khi đã tập quen, có thể chọn **1 phút cho phần live demo** để giảm thời gian chờ. Chọn đúng hạn mới ở bước tạo URL và chờ đủ hạn đó trước khi thử lại; không sửa con số trong URL. Căn thời gian ba chức năng khi tập toàn bài.
 
 ### Hiểu giới hạn của liên kết
 
@@ -170,15 +169,15 @@ Chỉ Delete object thông thường trong bucket bật Versioning có thể th�
 
 ## 9. Làm slide và chuẩn bị trình bày
 
-1. Dùng [PowerPoint 45 slide](slides/Amazon-S3-CloudNotes-45-slide.pptx) làm bản trình chiếu chính. Có thể trình chiếu trực tiếp hoặc nhập tệp này vào Canva theo [CANVA.md](CANVA.md).
-2. Đọc [dàn ý 45 slide](docs/dan-y-45-slide.md) để đối chiếu nội dung, gợi ý nói và nguồn. Phần lời nói dài đặt trong ghi chú.
-3. Phần demo bắt đầu ở slide 36–37 với bài toán và cấu hình. Slide 38 là upload/download; slides 39–40 là ghi đè rồi phục hồi; slides 41–42 là chia sẻ và thử hết hạn. Chuẩn bị bucket/Versioning từ trước, mở sẵn Console, file mẫu và cửa sổ ẩn danh.
-4. Kiểm tra ảnh trong bản nhập theo [báo cáo demo](docs/ket-qua-demo.md). Các ảnh thật nằm trong [assets/demo](assets/demo/README.md); số slide trong danh mục ảnh cũ áp dụng cho bản 30 slide, còn bảng vị trí cho bản 45 slide nằm ở [CANVA.md](CANVA.md).
-5. Ảnh thử hết hạn dùng **5 phút (300 giây)**; phần live có thể chọn **1 phút**. Giữ chú thích này, thử bằng request mới sau hạn và không đưa URL thật lên slide.
-6. Tập toàn bài theo mục tiêu **30–40 phút** và trả lời [10 câu hỏi ôn tập](docs/cau-hoi-on-tap.md). Mỗi thành viên nên hiểu cả ba chức năng; thời lượng chưa được xác nhận bằng một buổi luyện hoàn chỉnh.
+1. Dùng [PowerPoint bản gốc Canva](slides/Amazon-S3-ban-goc-Canva.pptx) làm bản trình chiếu chính, hoặc mở [bản gốc trực tuyến](https://canva.link/67bxz0ua9w88aoh).
+2. Tài liệu AWS và demo trong repository dùng để chuẩn bị phần thực hành; bản PowerPoint giữ nội dung và thiết kế của bản gốc Canva.
+3. Chuẩn bị bucket/Versioning từ trước, mở sẵn Console, file mẫu và cửa sổ ẩn danh. Làm lần lượt upload/download, ghi đè rồi phục hồi và chia sẻ có thời hạn theo [hướng dẫn demo](docs/demo-aws-console.md).
+4. Các ảnh thật nằm trong [assets/demo](assets/demo/README.md), kết quả kiểm chứng nằm trong [báo cáo demo](docs/ket-qua-demo.md). Số slide trong danh mục ảnh áp dụng cho bộ dàn ý 30 slide tham khảo, không xác định vị trí trong bản Canva gốc.
+5. Ảnh thử hết hạn dùng **5 phút (300 giây)**; phần live có thể chọn **1 phút**. Khi giải thích ảnh, phân biệt hai thời hạn này; thử bằng request mới sau hạn và không đưa URL thật lên slide.
+6. Tập toàn bài và trả lời [10 câu hỏi ôn tập](docs/cau-hoi-on-tap.md). Mỗi thành viên nên hiểu cả ba chức năng và tự căn thời gian theo buổi thuyết trình.
 
 ### Tài liệu tham khảo của bản 30 slide
 
-[Dàn ý 30 slide](docs/dan-y-30-slide.md), [canva-noi-dung.txt](canva-noi-dung.txt), [DAN-VAO-CANVA.txt](DAN-VAO-CANVA.txt) và [bo-canva-s3.zip](bo-canva-s3.zip) là bộ chuẩn bị trước đó, chỉ dùng để tham khảo. Các số trang và thời lượng trong bộ cũ không áp dụng cho bản chính 45 slide. Ba sơ đồ SVG về [kiến trúc](assets/so-do-kien-truc.svg), [Versioning](assets/so-do-versioning.svg) và [link tạm thời](assets/so-do-link-tam-thoi.svg) là hình giải thích khái niệm, không phải bằng chứng kiểm thử.
+[Dàn ý 30 slide](docs/dan-y-30-slide.md), [canva-noi-dung.txt](canva-noi-dung.txt), [DAN-VAO-CANVA.txt](DAN-VAO-CANVA.txt) và [bo-canva-s3.zip](bo-canva-s3.zip) là bộ chuẩn bị trước đó, chỉ dùng để tham khảo. Các số trang và thời lượng trong bộ này không áp dụng cho bản Canva gốc. Ba sơ đồ SVG về [kiến trúc](assets/so-do-kien-truc.svg), [Versioning](assets/so-do-versioning.svg) và [link tạm thời](assets/so-do-link-tam-thoi.svg) là hình giải thích khái niệm, không phải bằng chứng kiểm thử.
 
 Tra cứu thêm trong [hướng dẫn demo chi tiết](docs/demo-aws-console.md) và [nguồn AWS chính thức](docs/nguon-tham-khao.md). Không đưa mật khẩu, mã MFA, access key, session token hoặc presigned URL thật vào repository.
