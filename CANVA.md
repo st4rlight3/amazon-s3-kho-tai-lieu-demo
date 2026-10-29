@@ -2,6 +2,8 @@
 
 Bản bàn giao chính là [slides/Amazon-S3-CloudNotes-45-slide.pptx](slides/Amazon-S3-CloudNotes-45-slide.pptx), gồm **45 slide, tỷ lệ 16:9**, kèm [dàn ý 45 slide](docs/dan-y-45-slide.md). Dùng tệp PowerPoint này để trình chiếu hoặc nhập vào Canva; không tạo lại bản chính từ prompt 30 slide cũ.
 
+Xem trực tuyến: **[45 slide trên Canva](https://canva.link/578jhfpdcv8ehhh)**. Liên kết công khai chỉ cho phép xem và không yêu cầu đăng nhập.
+
 Bài hướng tới **30–40 phút**, với ba chức năng demo AWS Console ở phần cuối. Đây là thời lượng mục tiêu, chưa được xác nhận bằng một buổi luyện toàn bài. Nhóm cần tập để điều chỉnh nhịp nói và thao tác.
 
 Repository [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo) hiện **public**, mở được không cần đăng nhập GitHub. Có thể tạo QR repository trên slide 45. Bucket S3 của demo vẫn riêng tư; không tạo QR cho presigned URL.
