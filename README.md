@@ -6,6 +6,13 @@ Tải [PowerPoint bản gốc Canva](slides/Amazon-S3-ban-goc-Canva.pptx) để 
 
 Xem trực tuyến: **[Bản gốc trên Canva](https://canva.link/67bxz0ua9w88aoh)**.
 
+### Báo cáo và kịch bản thuyết trình
+
+- [Báo cáo Amazon S3 định dạng Word](docs/bao-cao-amazon-s3.docx): cơ sở lý thuyết, thiết kế kho tài liệu nhóm, ba chức năng demo, kết quả thực nghiệm, ảnh minh chứng và tài liệu tham khảo AWS. Điền tên nhóm, thành viên, lớp và giảng viên ở trang bìa trước khi nộp.
+- [Kịch bản thuyết trình định dạng Word](docs/kich-ban-thuyet-trinh-amazon-s3.docx): lời nói theo đúng **28 slide gốc**, thao tác và kết quả cần thấy, chuyển ý, câu hỏi ôn tập và cách xử lý sự cố. Tổng thời lượng gợi ý **35 phút 30 giây**, gồm 4 phút hỏi đáp; cần tập lại để căn thời gian thực tế.
+
+Ảnh kiểm thử presigned URL dùng 5 phút (300 giây); kịch bản trên lớp gợi ý tạo link mới 1 phút. Hình minh họa Singapore trên slide 25 được phân biệt với bucket demo thật `cloudnotes-starlight` ở Sydney trong kịch bản.
+
 **Không có ứng dụng web hoặc máy chủ cục bộ cần bật.** Bạn không phải cài Python, Streamlit, HTML, thư viện hay dependency của dự án. “Chạy dự án” nghĩa là đăng nhập AWS, tạo hoặc mở bucket demo và làm ba thao tác bên dưới. Clone repository chỉ tải tài liệu và tệp mẫu, không tự tạo tài nguyên trên AWS.
 
 Repository: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo), hiện **public**; người xem có thể mở tài liệu không cần đăng nhập GitHub. Bucket S3 của demo vẫn riêng tư. Trạng thái kiểm chứng thực tế nằm trong [báo cáo demo](docs/ket-qua-demo.md); các kết quả mô tả dưới đây là tiêu chí cần kiểm tra, không thay cho bằng chứng đã chạy.
