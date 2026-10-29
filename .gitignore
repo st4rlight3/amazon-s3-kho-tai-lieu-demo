@@ -17,3 +17,8 @@ tmp/
 *.log
 .DS_Store
 Thumbs.db
+
+# Presentation build cache and QA reports
+.pptx-build/
+.codex-finalizer/
+output/

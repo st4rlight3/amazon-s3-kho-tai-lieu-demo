@@ -1,97 +1,65 @@
-# Bàn giao nội dung cho Canva Pro
+# Bản trình chiếu chính để chỉnh trong Canva
 
-Dùng [canva-noi-dung.txt](canva-noi-dung.txt) để đưa đúng phần chữ ngắn lên 30 slide. [Dàn ý đầy đủ](docs/dan-y-30-slide.md) có lời thuyết trình, thời lượng, gợi ý hình và nguồn của từng trang; phần lời nói đặt trong ghi chú thuyết trình, không dồn lên mặt slide.
+Bản bàn giao chính là [slides/Amazon-S3-CloudNotes-45-slide.pptx](slides/Amazon-S3-CloudNotes-45-slide.pptx), gồm **45 slide, tỷ lệ 16:9**, kèm [dàn ý 45 slide](docs/dan-y-45-slide.md). Dùng tệp PowerPoint này để trình chiếu hoặc nhập vào Canva; không tạo lại bản chính từ prompt 30 slide cũ.
 
-Thời lượng mục tiêu là **35 phút 30 giây**, đã gồm **7 phút 30 giây demo trực tiếp**. Các trang 27–29 dẫn vào thao tác trên AWS Console; trình chiếu không thay thế phần demo thật.
+Bài hướng tới **30–40 phút**, với ba chức năng demo AWS Console ở phần cuối. Đây là thời lượng mục tiêu, chưa được xác nhận bằng một buổi luyện toàn bài. Nhóm cần tập để điều chỉnh nhịp nói và thao tác.
 
-Repository đã có nội dung được push: [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo). Repository hiện **public**; người xem có thể mở tài liệu không cần đăng nhập GitHub. Có thể tạo QR cho địa chỉ repository trên slide 30; không tạo QR cho presigned URL. Bucket S3 của demo vẫn riêng tư.
+Repository [st4rlight3/amazon-s3-kho-tai-lieu-demo](https://github.com/st4rlight3/amazon-s3-kho-tai-lieu-demo) hiện **public**, mở được không cần đăng nhập GitHub. Có thể tạo QR repository trên slide 45. Bucket S3 của demo vẫn riêng tư; không tạo QR cho presigned URL.
 
-## 1. Nội dung nhập cho Canva
+## 1. Nhập bản chính và kiểm tra trong Canva
 
-Sao chép phần yêu cầu dưới đây, rồi dán toàn bộ nội dung trong `canva-noi-dung.txt` ngay sau yêu cầu. Nếu công cụ tạo chưa đủ 30 trang, giữ nguyên danh sách nội dung và bổ sung các trang còn thiếu theo đúng số thứ tự, không yêu cầu công cụ tự nghĩ thêm ý.
+1. Tải tệp PowerPoint 45 slide từ liên kết trên về máy rồi nhập tệp vào Canva để mở thành bản trình chiếu có thể chỉnh sửa.
+2. Kiểm tra thiết kế có đúng **45 trang**, đúng thứ tự và tỷ lệ 16:9. Đối chiếu tiêu đề, nội dung và nguồn với [dàn ý 45 slide](docs/dan-y-45-slide.md).
+3. Thay tên nhóm và lớp trên trang đầu. Kiểm tra dấu tiếng Việt, xuống dòng, khoảng cách và chữ có bị tràn sau khi Canva chuyển đổi tệp.
+4. Kiểm tra ghi chú thuyết trình và liên kết nguồn. Nếu ghi chú chưa được giữ khi nhập, dùng phần **Gợi ý nói** trong dàn ý để bổ sung vào đúng trang.
+5. Giữ các ảnh demo thật trong thiết kế. Chỉ tải lại ảnh từ repository khi ảnh thiếu hoặc cần thay cách cắt; không dùng AI vẽ lại giao diện AWS để làm bằng chứng.
+6. Tập trình chiếu và thao tác thật theo phần demo bên dưới, rồi căn tổng thời lượng 30–40 phút.
 
-```text
-Tạo bộ thuyết trình TIẾNG VIỆT, đúng 30 slide, tỷ lệ 16:9, chủ đề Amazon S3: Kho tài liệu nhóm. Đối tượng là sinh viên và giảng viên. Nội dung để trình bày trong 30–40 phút, với phần demo AWS Console ở cuối. Chủ đề luôn là Amazon S3; không chuyển nội dung thành Amazon EC2 hoặc TaskFlow theo ảnh tham chiếu.
+Giữ nền navy/charcoal, chữ sáng, điểm nhấn cyan và cam tiết chế. Dùng font sans serif đủ dấu tiếng Việt; ưu tiên chữ đọc rõ trên màn chiếu. Ảnh nền trung tâm dữ liệu chỉ là hình minh họa. Ảnh Console và phản hồi S3 mới là bằng chứng cho các thao tác đã kiểm chứng.
 
-Nguồn nội dung duy nhất là danh sách 30 slide được dán sau yêu cầu này. Giữ đúng thứ tự, tiêu đề và các ý; không tự thêm số liệu, ví dụ sản phẩm, chức năng hoặc lời hứa của AWS. Không gộp hoặc tách slide. Các chỗ [điền tên] và [điền lớp] để nhóm tự cập nhật.
+## 2. Ba chức năng demo ở phần cuối
 
-Phong cách thiết kế: hội nghị công nghệ hiện đại, chuyên nghiệp, có chất biên tập. Nền sống động nhờ nhiều lớp, tương phản, ánh sáng và nhịp bố cục; tạo cảm giác trưởng thành và rõ ràng. Dùng deep navy #0B1220 hoặc charcoal #111820 làm nền chính, chữ trắng ngà #F2F7FF, điểm sáng cyan #38C6E8 và cam #FF9B42 tiết chế.
+| Slide trong bản 45 slide | Nội dung |
+| --- | --- |
+| 36–37 | Bài toán kho tài liệu và cấu hình chuẩn bị |
+| 38 | Demo 1: Upload V1 và download để kiểm tra |
+| 39–40 | Demo 2: Upload V2 cùng key, lấy lại V1 từ S3 rồi upload thành V3 |
+| 41–42 | Demo 3: URL thường bị chặn, presigned URL còn hạn đọc được, request mới sau hạn bị từ chối |
+| 43 | Kết quả và dọn tài nguyên sau buổi học |
+| 44–45 | Kiến thức cần nhớ, tài liệu và repository |
 
-Tạo chiều sâu bằng gradient tối tinh tế, ánh sáng cyan/cam ở mép, lưới mảnh, đường luồng dữ liệu và hình học trừu tượng. Các lớp nền nằm sau chữ chỉ khoảng 7–15% độ đậm/opacity, giữ vùng đọc sạch. Có thể dùng chọn lọc ảnh thật của trung tâm dữ liệu ở trang mở đầu hoặc chuyển phần; không dùng ảnh trang trí dày đặc trên mọi slide. Tuyệt đối tránh chữ trắng trên nền trắng hoặc mảng nền sáng không có tương phản.
+Tạo bucket và bật Versioning từ trước buổi học; khi bật Versioning lần đầu, làm theo thời gian chờ trong [hướng dẫn demo](docs/demo-aws-console.md). Dàn 45 slide quyết định số trang của bản chính; các số trang và nhịp thời gian trong hướng dẫn cũ chỉ dùng để tham khảo thao tác.
 
-Không dùng nhân vật hoạt hình, người tí hon, đám mây/máy chủ 3D kiểu đồ chơi, laptop mockup, hình truyện tranh, mascot 3D, pastel clipart hay icon ngộ nghĩnh. Không sao chép phong cách đồ họa hoạt hình từ ảnh tham chiếu. Hình chính ưu tiên ảnh AWS Console thật đã che thông tin, sơ đồ kiến trúc, sơ đồ Versioning, luồng truy cập, bảng và timeline chính xác.
+**Chú thích phải giữ ở phần hết hạn:** “Ảnh kiểm thử: 5 phút (300 giây); demo trực tiếp: 1 phút.” Ảnh lỗi thật ghi rõ 300 giây. Khi diễn trực tiếp, tạo URL mới với thời hạn một phút và gửi request mới sau hạn. File đã tải không tự biến mất khi URL hết hiệu lực.
 
-Dùng font sans serif có đủ dấu tiếng Việt; tiêu đề 40–48 pt, nội dung 24–28 pt, nguồn nhỏ hơn ở chân trang. Nhấn từ khóa và số liệu bằng phân cấp cỡ chữ, độ đậm và một màu điểm nhấn. Tiêu đề dài được xuống hai dòng; giữ tương phản mạnh và không thu nhỏ nội dung để nhồi chữ.
+## 3. Ảnh thật và vị trí trong bản 45 slide
 
-Mỗi trang tập trung vào một thông điệp. Luân phiên bố cục: tiêu đề lớn với khoảng trống, chữ bên trái/hình bên phải, hai cột đối chiếu, timeline ngang, bảng ngắn và ảnh bằng chứng cắt gọn. Dùng đường phân cách, khung ảnh và mảng tối có chủ đích để nền có nhịp, không lặp một bố cục suốt 30 trang. Căn lề, số trang và vị trí nguồn thống nhất; chỉ dùng chuyển cảnh nhẹ.
+Tám ảnh trong [assets/demo](assets/demo/README.md) đã được chụp từ AWS S3 thật. [Báo cáo demo](docs/ket-qua-demo.md) ghi kết quả kiểm chứng. Bảng dưới dùng số trang của **bản 45 slide**, thay cho số trang của bản cũ trong danh mục ảnh.
 
-Phân biệt durability là độ bền dữ liệu với availability là độ sẵn sàng. Với S3 Standard, giữ đúng số 99.999999999% và 99.99%, tương ứng; ghi là “được thiết kế cho”, không chuyển thành bảo đảm tuyệt đối. Không áp hai số này cho mọi storage class.
-
-Demo có đúng ba chức năng: upload/download, khôi phục nội dung bằng Versioning, chia sẻ qua presigned URL. Phạm vi là một general purpose bucket riêng tư, S3 Standard, Block Public Access bật, ACL disabled/Bucket owner enforced và SSE-S3. Không thêm ứng dụng web, mã HTML/Python, website hosting, IAM access key hoặc một bucket công khai.
-
-Khi minh họa khôi phục, dùng dòng v1 → v2 → v3, với nội dung v1 được tải về rồi upload lại thành v3 cùng key. Đừng vẽ thao tác xóa v2. v1/v2/v3 là cách gọi trong bài, không phải định dạng Version ID thật của AWS.
-
-Ảnh demo sẽ do nhóm tải lên từ repo và gán đúng trang theo bảng ảnh kèm theo. Chỉ dùng ảnh thực có; không tạo ảnh giả giao diện AWS để làm bằng chứng. Không hiển thị presigned URL thật, chữ ký URL, thông tin đăng nhập hay tài khoản AWS. Nếu chưa có ảnh, để ô giữ chỗ ghi rõ “Chèn ảnh demo thật sau khi kiểm tra”.
-
-Đặt lời thuyết trình dài trong ghi chú, không dùng để tăng chữ trên mặt slide. Duy trì các trích dẫn AWS lấy từ dàn ý đầy đủ ở chân trang tương ứng; không tự phát minh nguồn.
-
-DANH SÁCH NỘI DUNG 30 SLIDE:
-[Dán toàn bộ canva-noi-dung.txt vào đây]
-```
-
-Nếu Canva không tiếp nhận hết nội dung một lượt, nhập theo ba nhóm **01–10, 11–20, 21–30** trong cùng một thiết kế. Dùng lại kiểu chữ, bảng màu và lưới bố cục của nhóm đầu; giữ tổng cộng 30 trang.
-
-## 2. Ảnh thật cần tải lên và vị trí chèn
-
-Tải các ảnh JPG dưới đây từ `assets/demo/` khi chúng thực sự đã được chụp và kiểm tra. Danh mục này mô tả ảnh cần có; xem [báo cáo demo](docs/ket-qua-demo.md) để biết trạng thái chạy thật. Trước khi chia sẻ hoặc tải ảnh lên Canva, che toàn bộ URL đã ký và thông tin tài khoản.
-
-`bo-canva-s3.zip` là gói tải về để **giải nén trên máy**, không phải file đưa vào Canva để tự tạo thiết kế. Sau khi giải nén, dán prompt và nội dung chữ, rồi **tải riêng các ảnh JPG** lên Canva. Các SVG minh họa ở phần tiếp theo dùng tùy chọn.
-
-| Tệp trong `assets/demo/` | Slide chính | Cách dùng |
+| Tệp trong assets/demo/ | Slide phù hợp | Điều cần giữ |
 | --- | --- | --- |
-| `01-bucket-rieng-tu.jpg` | 17, 26 | Cắt vùng bucket demo và Block Public Access; thêm nhãn “Private” |
-| `02-upload-thanh-cong.jpg` | 27 | Làm nổi object `ke-hoach-nhom.txt` đã upload |
-| `03-cac-phien-ban.jpg` | 19, 28 | Làm nổi nhiều Version ID của cùng key; nhãn v1/v2/v3 chỉ là tên giải thích |
-| `04-khoi-phuc-v1.jpg` | 28 | Cho thấy nội dung bản hiện tại đã có lịch đúng của V1 |
-| `05-truy-cap-bi-chan.jpg` | 17, 29 | Trạng thái “Không có quyền” khi dùng URL thường |
-| `06-link-tam-thoi.jpg` | 29 | Trạng thái “Được chia sẻ” khi dùng URL còn hạn |
-| `07-link-het-han.jpg` | 29 | Trạng thái “Hết hạn” với một yêu cầu mới |
-| `08-versioning-enabled.jpg` | 19, 26 | Bằng chứng Versioning Enabled và Region Sydney; cắt gọn vùng cấu hình |
+| 01-bucket-rieng-tu.jpg | 18, 36 | Block Public Access bật; bucket vẫn riêng tư |
+| 02-upload-thanh-cong.jpg | 38 | Upload thành công vào bucket demo |
+| 03-cac-phien-ban.jpg | 22, 40 | Ba versions của cùng key; bản hiện tại đã phục hồi |
+| 04-khoi-phuc-v1.jpg | 40 | Nội dung có lịch đúng “Thu Sau, 14:00” |
+| 05-truy-cap-bi-chan.jpg | 41 | URL thường trả AccessDenied |
+| 06-link-tam-thoi.jpg | 41–42 | GET có chữ ký còn hạn đọc được nội dung |
+| 07-link-het-han.jpg | 42 | Request has expired; phép thử dùng 300 giây |
+| 08-versioning-enabled.jpg | 37 | Versioning Enabled, Region Sydney |
 
-Slide 29 có thể dùng ba ảnh 05–07 theo hàng ngang, mỗi ảnh một trạng thái và một nhãn ngắn. Cắt gọn để chữ lỗi hoặc nội dung tài liệu đọc được; không cần chụp toàn bộ trình duyệt. Slide 08 có thể tái sử dụng ảnh 01 nếu phù hợp, nhưng sơ đồ bucket trong dàn ý đã đủ giải thích khái niệm.
+Ảnh 04 và 06 là cùng một lần GET thành công của bản hiện tại đã khôi phục; không mô tả thành hai phép thử độc lập. Cắt gọn và phóng vùng nội dung/lỗi đủ đọc. Không hiển thị presigned URL, chữ ký URL, thông tin đăng nhập hoặc tài khoản AWS trên slide hay trong ghi chú.
 
-Danh mục gốc: [assets/demo/README.md](assets/demo/README.md). Các đường dẫn trong repo không tự đưa ảnh vào thiết kế; nhóm cần chọn đúng tệp ảnh để tải lên.
+Ba SVG [kiến trúc](assets/so-do-kien-truc.svg), [Versioning](assets/so-do-versioning.svg) và [link tạm thời](assets/so-do-link-tam-thoi.svg) là sơ đồ khái niệm tùy chọn, không phải ảnh kiểm thử.
 
-### Sơ đồ minh họa có sẵn, dùng tùy chọn
+## 4. Nội dung phải giữ chính xác
 
-Ba file SVG dưới đây là **sơ đồ khái niệm do nhóm thiết kế**, không phải ảnh chụp AWS và không phải bằng chứng demo đã chạy. Có thể dùng trực tiếp như hình minh họa hoặc dựng lại bằng các khối trong Canva; chúng không thay thế tám ảnh kết quả thật ở trên.
+- S3 là dịch vụ lưu trữ đối tượng. Demo dùng một general purpose bucket riêng tư, S3 Standard, key gốc ke-hoach-nhom.txt, Block Public Access bật, ACL disabled/Bucket owner enforced và SSE-S3.
+- Slide 14: S3 Standard được thiết kế cho độ bền dữ liệu **99.999999999%** và độ sẵn sàng **99.99%** trong một năm. Không đổi lẫn nhãn hoặc áp dụng cho mọi storage class.
+- Phục hồi là luồng **v1 → v2 → v3**, với nội dung v1 được lấy từ S3 rồi upload cùng key thành v3. Không xóa v2. Các nhãn v1/v2/v3 là cách gọi trong bài, không phải Version ID thật.
+- Presigned URL có thể được dùng nhiều lần khi còn hiệu lực. Bucket vẫn riêng tư; URL có thể hết sớm nếu credentials của người ký hết hạn hoặc bị thu hồi.
+- Chỉ ba chức năng trên được trình bày là demo đã chạy. Object Lock, Lifecycle, multipart upload, Athena, sự kiện và replication là kiến thức mở rộng; không thêm kết quả benchmark hoặc triển khai chưa thực hiện.
+- Nguồn theo [dàn ý 45 slide](docs/dan-y-45-slide.md) và [tài liệu AWS](docs/nguon-tham-khao.md). Không biến mục tiêu thiết kế thành lời hứa tuyệt đối.
 
-| Sơ đồ | Slide gợi ý | Ý cần giải thích |
-| --- | --- | --- |
-| [assets/so-do-kien-truc.svg](assets/so-do-kien-truc.svg) | 26 | Người trình bày dùng Console quản lý S3; GitHub giữ tài liệu |
-| [assets/so-do-versioning.svg](assets/so-do-versioning.svg) | 19, 28 | Nội dung v1 được tải rồi upload cùng key thành v3 |
-| [assets/so-do-link-tam-thoi.svg](assets/so-do-link-tam-thoi.svg) | 29 | URL thường bị chặn; URL đã ký còn hạn đọc được; yêu cầu mới sau hạn bị từ chối |
+## 5. Bộ cũ chỉ dùng để tham khảo
 
-## 3. Giữ lời nói, nguồn và demo thống nhất
-
-- Sao chép **Lời thuyết trình** từ dàn ý vào ghi chú của đúng slide. Không dùng phần ghi chú này làm nội dung mặt trang.
-- Chọn nguồn AWS từ mục **Nguồn** của từng slide; đặt tên nguồn ngắn kèm liên kết ở chân trang. Nguồn tổng hợp nằm ở [docs/nguon-tham-khao.md](docs/nguon-tham-khao.md).
-- Giữ mốc **14/03/2006** là ngày công bố S3; không lấy giá hoặc giới hạn năm 2006 làm thông số hiện tại.
-- Với hai chỉ số S3 Standard, lời giải thích đầy đủ là mục tiêu thiết kế **trong một năm**: độ bền dữ liệu `99.999999999%`, độ sẵn sàng `99.99%`. Không đổi lẫn hai nhãn.
-- Demo dùng đúng key `ke-hoach-nhom.txt` tại gốc bucket. Hai thư mục mẫu trên máy không trở thành hai prefix trên S3.
-- Presigned URL là quyền tạm thời cho người có liên kết; không phải link chỉ dùng một lần. Không đưa URL thật vào chữ, hình, ghi chú hay mã QR.
-- Đối chiếu thời gian thao tác với [hướng dẫn demo](docs/demo-aws-console.md); tạo bucket và chờ Versioning trước giờ trình bày, không tính vào thời lượng demo.
-
-## 4. Kiểm tra trước buổi thuyết trình
-
-- [ ] Đúng 30 trang và thứ tự; tên nhóm/lớp đã thay.
-- [ ] Không lỗi dấu tiếng Việt, chữ tràn khung hoặc tỷ lệ phần trăm bị đổi.
-- [ ] Mọi chữ chính đọc được trên màn chiếu; đồ họa chỉ hỗ trợ một ý mỗi trang.
-- [ ] Nền có chiều sâu nhưng ít tương phản sau chữ; không có hoạt hình, đồ chơi 3D hoặc chữ trắng trên trắng.
-- [ ] Slide 14 phân biệt đúng hai chỉ số; slide 19 thể hiện bản phục hồi thành version mới.
-- [ ] Ảnh thật đã che thông tin; không có URL đã ký hoặc ảnh giả làm bằng chứng.
-- [ ] Ghi chú đủ lời nói, nguồn bấm được và khớp trang.
-- [ ] Slides 27–29 kết nối đúng ba thao tác live; cửa sổ AWS Console và file mẫu đã mở sẵn.
-- [ ] Nhóm đã tập và căn thời gian toàn bài; mỗi thành viên giải thích được các bước demo.
-
-File TXT chỉ chứa tiêu đề và các ý trên slide, được trích nguyên văn từ dàn ý. Khi sửa nội dung dàn ý, cập nhật lại TXT trước khi nhập lại Canva để tránh hai bản khác nhau.
+[Dàn ý 30 slide](docs/dan-y-30-slide.md), [canva-noi-dung.txt](canva-noi-dung.txt), [DAN-VAO-CANVA.txt](DAN-VAO-CANVA.txt) và [bo-canva-s3.zip](bo-canva-s3.zip) thuộc bộ chuẩn bị trước đó. Giữ chúng làm tài liệu tham khảo; không dùng số trang hoặc thời lượng của bộ cũ cho bản chính 45 slide. ZIP cũ là gói giải nén trên máy, không phải bản trình chiếu mới để nhập vào Canva.
